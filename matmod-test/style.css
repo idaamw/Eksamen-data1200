@@ -1,5 +1,7 @@
 body {
-    margin: 0
+    margin: 0;
+    padding: 7%
+    
 }
 header {
     background-color: rgb(255, 213, 0);
@@ -63,7 +65,7 @@ h2 {
 }
 
 
-.oversikt-tabell {
+.oversikt-tabell, th, td {
 
     border-spacing: 20px;
     color: black;
@@ -77,4 +79,58 @@ td {
 .ingress {
     margin-left: 25%;
     margin-right: 25%;
+    margin-top: 35px;
+    margin-bottom: 35px;
 }
+
+.oppbygging-tabell, .oppbygging-tabell th, .oppbygging-tabell td {
+    border: solid;
+    border-width: 1px;
+    border-collapse: collapse;
+    border-color: black;
+    padding-top: 1%;
+    padding-bottom: 1%;
+    text-align: center;
+    vertical-align: top;
+
+}
+
+.valgfag {
+    background-color: rgb(195, 227, 255);
+}
+
+.kristoffer-bilde {
+    width: 30%;
+    float: left;
+}
+
+.spa-fremtiden, .spa-fremtiden a { 
+    background-color: rgb(255, 213, 0);
+    color: black;
+    overflow: hidden;  /* setter div til samme høyde som bildet.
+    virker i nettleser men ikke vscode*/
+}
+.smilefjes-bilde {
+    width: 50%;
+    float: right;
+}
+.spa-fremtiden-head {
+    padding-left: 4%;
+}
+.spa-fremtiden p {
+    padding-left: 4%;
+    padding-bottom: 3%;
+}
+.spa-fremtiden h5 {
+    padding-left: 4%;
+    padding-top: 2%;
+}
+
+.andre-studier-button {
+    background-color: white;
+    border: none;
+}
+
+
+
+
