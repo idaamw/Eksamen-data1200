@@ -1,13 +1,40 @@
 body {
-    margin: 0;
-    padding: 7%
-    
+    font-family: Moderat, Avenir, Helvetica, Arial; /* må endres */ 
 }
+
+main {
+    margin-left: 7%;
+    margin-right: 7%;
+    margin-top: none;
+}
+
+
 header {
-    background-color: rgb(255, 213, 0);
+    background-color: rgb(0, 242, 255);
     height: 10%;
-    margin-top: 0px;
+    margin: 0px;
+    padding: 0px;
 }
+
+footer {
+    background-color: rgb(0, 242, 255);
+}
+
+header>nav {
+    float: right;
+}
+
+a {
+    text-decoration-color: yellow;  /*endres*/
+    color: black;
+    font-weight: 600;
+}
+
+
+button:hover, a:hover { 
+    cursor: pointer; /*Museknappen endrer seg til hånd når den er over linker og knapper*/
+}
+
 
 h2 {
     font-size: large;
@@ -18,58 +45,10 @@ h2 {
     margin-left: 14%;
     margin-top: 1%;
 }
-.sok-button {
-    background-color: rgb(255, 213, 0);
-    border: none;
-    margin-left: 52%;
-    margin-right: 2%;
-    margin-top: 2%;
-    vertical-align: top;
-    padding-top: 8px;
-    padding-bottom: 8px;
-    font-size: 16px;
-    font-family: Moderat, Avenir, Helvetica, Arial; /* må endres */
-    font-weight: bold;
-}
-.meny-button {
-    background-color: rgb(255, 213, 0);
-    border: none;  
-    margin-right: 10%;
-    margin-top: 2%;
-    vertical-align: top;
-    padding-top: 8px;
-    padding-bottom: 8px;
-    font-size: 16px;
-    font-family: Moderat, Avenir, Helvetica, Arial;
-    font-weight: bold;
-}
-.studieoversikt-button {
-    background-color: rgb(255, 213, 0);
-    font-size: 16px;
-    font-family: Moderat, Avenir, Helvetica, Arial;
-    font-weight: bold;
-    text-decoration: underline;
-    border: none;
-    margin-top: 2%;
-    margin-left: 14%;
-    margin-bottom: 2%;
-}
-.sok-button:hover {
-    background-color: rgb(254, 221, 57);
-}
-.meny-button:hover {
-    cursor: pointer;
-}
-.studieoversikt-button:hover {
-    cursor: pointer;
-}
-
 
 .oversikt-tabell, th, td {
-
     border-spacing: 20px;
     color: black;
-    
 }
 
 td {
@@ -92,7 +71,6 @@ td {
     padding-bottom: 1%;
     text-align: center;
     vertical-align: top;
-
 }
 
 .valgfag {
@@ -102,11 +80,12 @@ td {
 .kristoffer-bilde {
     width: 30%;
     float: left;
+    padding-right: 3%;
 }
 
 .spa-fremtiden, .spa-fremtiden a { 
     background-color: rgb(255, 213, 0);
-    color: black;
+    text-decoration: none;
     overflow: hidden;  /* setter div til samme høyde som bildet.
     virker i nettleser men ikke vscode*/
 }
@@ -114,14 +93,15 @@ td {
     width: 50%;
     float: right;
 }
-.spa-fremtiden-head {
+.spa-fremtiden-overskrift {
+    font-size: x-large;
     padding-left: 4%;
 }
 .spa-fremtiden p {
     padding-left: 4%;
     padding-bottom: 3%;
 }
-.spa-fremtiden h5 {
+.spa-fremtiden h2, h5 {
     padding-left: 4%;
     padding-top: 2%;
 }
@@ -129,8 +109,26 @@ td {
 .andre-studier-button {
     background-color: white;
     border: none;
+    text-align: left;
+    padding: 3%;
+    text-decoration: none;
 }
 
+.andre-studier-link {
+    text-decoration: none;
+}
+
+.faglig-leder-button {
+    background-color: white;
+    border: none;
+    border-top: solid;
+    border-bottom: solid;
+    border-width: 1px;
+    border-color: gray;
+    padding-top: 1%;
+    padding-bottom: 1%;
+    text-align: left;
+}
 
 
 
