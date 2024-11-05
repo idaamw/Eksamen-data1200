@@ -1,31 +1,43 @@
 body {
     font-family: Moderat, Avenir, Helvetica, Arial; /* må endres */ 
-}
+   /* background-color: rgb(34, 34, 34);
+    color: white;
+    */
 
-main {
-    margin-left: 7%;
-    margin-right: 7%;
-    margin-top: none;
 }
 
 
 header {
-    background-color: rgb(0, 242, 255);
-    height: 10%;
+    background-color: rgb(157, 141, 214);
+    height: 5vw;
     margin: 0px;
     padding: 0px;
 }
 
-footer {
-    background-color: rgb(0, 242, 255);
-}
 
 header>nav {
+    text-align: center;
     float: right;
+    font-size: large;
+    margin-top: 2vw;
 }
 
+header a {
+    padding-right: 15vw;
+}
+
+
+
+footer {
+    margin-top: 5%;
+    background-color: rgb(157, 141, 214);
+    overflow: hidden;
+    padding-left: 30%;
+}
+
+
 a {
-    text-decoration-color: yellow;  /*endres*/
+    text-decoration: none;  /*endres*/
     color: black;
     font-weight: 600;
 }
@@ -35,9 +47,16 @@ button:hover, a:hover {
     cursor: pointer; /*Museknappen endrer seg til hånd når den er over linker og knapper*/
 }
 
+h1{
+    font-size: xx-large;
+}
 
 h2 {
-    font-size: large;
+    font-size: x-large;
+}
+
+h3 {
+    font-size: large
 }
 
 .oslomet-logo {
@@ -49,12 +68,26 @@ h2 {
 .oversikt-tabell, th, td {
     border-spacing: 20px;
     color: black;
+    text-align: left;
 }
 
 td {
     vertical-align: top;
 }
 
+details > summary {
+    list-style: none;
+  }
+details > summary::-webkit-details-marker {
+    display: none;
+  }
+
+
+
+.innledning {
+    text-align: center;
+} 
+  
 .ingress {
     margin-left: 25%;
     margin-right: 25%;
@@ -83,27 +116,46 @@ td {
     padding-right: 3%;
 }
 
-.spa-fremtiden, .spa-fremtiden a { 
-    background-color: rgb(255, 213, 0);
+.studenthistorier-h2 {
+margin-left: 5%
+}
+
+.spa-fremtiden-aside{
+    margin-left: 5%;
+    margin-right: 5%;
+}
+.spa-fremtiden-aside, .spa-fremtiden-aside a { 
+    background-color: rgb(103, 134, 144);
+    color: white;
     text-decoration: none;
     overflow: hidden;  /* setter div til samme høyde som bildet.
     virker i nettleser men ikke vscode*/
 }
-.smilefjes-bilde {
-    width: 50%;
-    float: right;
-}
+
 .spa-fremtiden-overskrift {
     font-size: x-large;
     padding-left: 4%;
 }
-.spa-fremtiden p {
+.spa-fremtiden-aside h2 {
     padding-left: 4%;
-    padding-bottom: 3%;
+    padding-top: 3%;
 }
-.spa-fremtiden h2, h5 {
+
+.spa-fremtiden-aside h5 {
     padding-left: 4%;
     padding-top: 2%;
+    font-size: medium;
+}
+
+.spa-fremtiden-aside p {
+    padding-left: 4%;
+    font-size: medium;
+}
+
+
+.smilefjes-bilde {
+    width: 50%;
+    float: right;
 }
 
 .andre-studier-button {
@@ -130,5 +182,96 @@ td {
     text-align: left;
 }
 
+.wrapper {
+    display: grid;
+    grid-template-columns: 50vw 50vw; /* 1fr 1fr ?*/
+    grid-auto-rows: minmax(100px, auto);
+}
+
+.wrapper > * {
+    margin:1vw;
+    
+}  /* gir mellomrom mellom boksene, løser ish "strek problemet" */
+
+.hva-lærer-du {
+    grid-row: 1;
+    background-color: rgb(218, 228, 236);
+    padding: 2%;
+}
 
 
+.lilla-student-bilde {
+    grid-row: 1;
+    grid-column: 2;
+    justify-content: normal;
+}
+
+.lilla-student-bilde>img {
+    object-fit: contain;
+    max-width: 100%;
+}
+
+.koding-bilde {
+    grid-row: 2;
+    grid-column: 1;
+    max-width: 100%;
+}
+
+.hva-kan-du-jobbe-som {
+    grid-row: 2;
+    grid-column: 2;
+    background-color: rgb(34, 34, 34);
+    color: white;
+    padding: 2%; 
+}
+
+
+
+.wrapper h2 {
+    text-align: center;
+}
+
+.hvordan-foregår-undervisningen {
+    grid-row: 3;
+    grid-column: 1;
+    padding: 2%;
+    background-color: rgb(142, 69, 133);
+    color: white;
+}
+
+.gruppearbeid-bilde {
+    grid-row: 3;
+    grid-column: 2;
+}
+
+.gruppearbeid-bilde>img {
+    object-fit: cover;
+    max-width: 100%;
+}
+
+
+.flere-studenthistorier-button {
+    background-color: rgb(34, 34, 34);
+    color: white;
+    font-size: large;
+    margin-left: 5%;
+    margin-top: 2%;
+    padding: 1%;
+    font-weight: 600;
+    border: none;
+}
+
+/* FOOTER */
+.nyhetsbrev-button {
+    background-color: rgb(34, 34, 34);
+    color: white;
+    font-size: large;
+    font-weight: 600;
+    padding: 1%;
+    border: none;
+}
+
+.storbyuniversitetet-bilde {
+    width: 400px;
+    margin-top: 2%;
+}
