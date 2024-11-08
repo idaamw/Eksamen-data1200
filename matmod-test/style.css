@@ -95,7 +95,7 @@ details > summary::-webkit-details-marker {
     margin-bottom: 35px;
 }
 
-.oppbygging-tabell, .oppbygging-tabell th, .oppbygging-tabell td {
+.oppbygging-tabell {
     border: solid;
     border-width: 1px;
     border-collapse: collapse;
@@ -104,6 +104,14 @@ details > summary::-webkit-details-marker {
     padding-bottom: 1%;
     text-align: center;
     vertical-align: top;
+}
+
+.oppbygging-tabell tr {
+    border: solid;
+}
+
+.oppbygging-tabell th, .oppbygging-tabell td {
+    border: dashed 1px;
 }
 
 .valgfag {
