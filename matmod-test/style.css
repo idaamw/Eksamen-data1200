@@ -3,48 +3,6 @@ body {
    /* background-color: rgb(34, 34, 34);
     color: white;
     */
-
-}
-
-
-header {
-    background-color: rgb(157, 141, 214);
-    height: 5vw;
-    margin: 0px;
-    padding: 0px;
-}
-
-
-header>nav {
-    text-align: center;
-    float: right;
-    font-size: large;
-    margin-top: 2vw;
-}
-
-header a {
-    padding-right: 15vw;
-}
-
-
-
-footer {
-    margin-top: 5%;
-    background-color: rgb(157, 141, 214);
-    overflow: hidden;
-    padding-left: 30%;
-}
-
-
-a {
-    text-decoration: none;  /*endres*/
-    color: black;
-    font-weight: 600;
-}
-
-
-button:hover, a:hover { 
-    cursor: pointer; /*Museknappen endrer seg til hånd når den er over linker og knapper*/
 }
 
 h1{
@@ -59,22 +17,84 @@ h3 {
     font-size: large
 }
 
+a {
+    text-decoration: none;  /*endres*/
+    color: black;
+    font-weight: 600;
+}
+
+button:hover, a:hover { 
+    cursor: pointer; /*Museknappen endrer seg til hånd når den er over linker og knapper*/
+}
+
+figcaption {
+    color: gray;
+    font-size: small;
+}
+
+
+/*HEADER*/
+header {
+    background-color: rgb(157, 141, 214);
+    /*height: 4fr;*/
+    margin: 0px;
+    padding: 0px;
+}
+
+header>nav {
+    text-align: center;
+    float: right;
+    font-size: large;
+    margin-top: 2vw;
+}
+
+header a {
+    padding-right: 15vw;
+}
+
 .oslomet-logo {
     width: 5%;
     margin-left: 14%;
     margin-top: 1%;
 }
 
-.oversikt-tabell, th, td {
+ /* @media screen and (max-width: 500px) {
+    header {
+        height: 500px;    
+    }
+} /* Bestemmer header for skjermer under x px */
+
+
+
+/* INNLEDNING (mellom header og hoved-grid) */
+.innledning {
+    text-align: center;
+} 
+
+.ingress {
+    margin-left: 25%;
+    margin-right: 25%;
+    margin-top: 35px;
+    margin-bottom: 35px;
+}
+
+.oversikt-tabell, th, td { /*MÅ FIKSES MTP PÅ SKALERING*/
     border-spacing: 20px;
     color: black;
     text-align: left;
+}
+
+.oversikt-tabell{
+    margin-left: auto;
+    margin-right: auto; /* Plasserer tabellen midt på siden (horisontalt)*/
 }
 
 td {
     vertical-align: top;
 }
 
+
+/* DETAILS*/
 details > summary {
     list-style: none;
   }
@@ -84,16 +104,6 @@ details > summary::-webkit-details-marker {
 
 
 
-.innledning {
-    text-align: center;
-} 
-  
-.ingress {
-    margin-left: 25%;
-    margin-right: 25%;
-    margin-top: 35px;
-    margin-bottom: 35px;
-}
 
 .oppbygging-tabell, .oppbygging-tabell th, .oppbygging-tabell td {
     border: solid;
@@ -110,6 +120,91 @@ details > summary::-webkit-details-marker {
     background-color: rgb(195, 227, 255);
 }
 
+
+/* MAIN-GRID*/
+
+.main-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(500px, 1fr)) /* Juster minimum px */
+}
+
+
+ @media screen and (max-width: 768px) {
+    .main-grid {
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr;
+    }
+} /* ????? */
+
+.main-grid > * {
+    margin:1vw;
+}  /* gir mellomrom mellom boksene */
+
+.hva-lærer-du, .lilla-student-bilde, .hva-kan-du-jobbe-som, .koding-bilde {
+    grid-column: auto;
+    grid-row: auto;
+}
+
+.main-grid h2 {
+    text-align: center;
+}
+
+/* Boks 1 */
+.hva-lærer-du { 
+    background-color: rgb(218, 228, 236);
+    padding: 2%;
+}
+
+/* Boks 2 */
+.lilla-student-bilde { 
+    justify-content: normal;
+}
+
+.lilla-student-bilde>img {
+    object-fit: cover; /* cover sørger for at containeren alltid fylles opp av bildet */
+    max-width: 100%;
+} 
+
+/* Boks 3*/
+.koding-bilde {
+    max-width: 100%;
+}
+
+/* Boks 4*/
+.hva-kan-du-jobbe-som {
+    background-color: rgb(34, 34, 34);
+    color: white;
+    padding: 2%; 
+}
+
+
+.hvordan-foregår-undervisningen {
+    padding: 2%;
+    background-color: rgb(142, 69, 133);
+    color: white;
+}
+
+
+.gruppearbeid-bilde>img {
+    object-fit: cover;
+    max-width: 100%;
+} 
+
+.videre-studiemuligheter {
+    background-color: rgb(157, 141, 214);
+}
+
+.hva-koster-det {
+    background-color:  rgb(218, 228, 236);
+}
+
+.opptakskrav-og-poeng, .opptakskrav-og-poeng a {
+    background-color: rgb(34, 34, 34);
+    color: white;
+}
+
+
+/* UTLEDNING (lol) */
 .kristoffer-bilde {
     width: 30%;
     float: left;
@@ -120,6 +215,33 @@ details > summary::-webkit-details-marker {
 margin-left: 5%
 }
 
+
+.andre-studier-button {
+    background-color: white;
+    border: none;
+    text-align: left;
+    padding: 3%;
+    text-decoration: none;
+}
+
+.andre-studier-link {
+    text-decoration: none;
+}
+
+.faglig-leder-button {
+    background-color: white;
+    border: none;
+    border-top: solid;
+    border-bottom: solid;
+    border-width: 1px;
+    border-color: gray;
+    padding-top: 1%;
+    padding-bottom: 1%;
+    text-align: left;
+}
+
+
+/*ASIDE*/
 .spa-fremtiden-aside{
     margin-left: 5%;
     margin-right: 5%;
@@ -128,8 +250,7 @@ margin-left: 5%
     background-color: rgb(103, 134, 144);
     color: white;
     text-decoration: none;
-    overflow: hidden;  /* setter div til samme høyde som bildet.
-    virker i nettleser men ikke vscode*/
+    overflow: hidden;  /* setter aside boks til samme høyde som bildet */
 }
 
 .spa-fremtiden-overskrift {
@@ -158,99 +279,7 @@ margin-left: 5%
     float: right;
 }
 
-.andre-studier-button {
-    background-color: white;
-    border: none;
-    text-align: left;
-    padding: 3%;
-    text-decoration: none;
-}
-
-.andre-studier-link {
-    text-decoration: none;
-}
-
-.faglig-leder-button {
-    background-color: white;
-    border: none;
-    border-top: solid;
-    border-bottom: solid;
-    border-width: 1px;
-    border-color: gray;
-    padding-top: 1%;
-    padding-bottom: 1%;
-    text-align: left;
-}
-
-.wrapper {
-    display: grid;
-    grid-template-columns: 50vw 50vw; /* 1fr 1fr ?*/
-    grid-auto-rows: minmax(100px, auto);
-}
-
-.wrapper > * {
-    margin:1vw;
-    
-}  /* gir mellomrom mellom boksene, løser ish "strek problemet" */
-
-.hva-lærer-du {
-    grid-row: 1;
-    background-color: rgb(218, 228, 236);
-    padding: 2%;
-}
-
-
-.lilla-student-bilde {
-    grid-row: 1;
-    grid-column: 2;
-    justify-content: normal;
-}
-
-.lilla-student-bilde>img {
-    object-fit: contain;
-    max-width: 100%;
-}
-
-.koding-bilde {
-    grid-row: 2;
-    grid-column: 1;
-    max-width: 100%;
-}
-
-.hva-kan-du-jobbe-som {
-    grid-row: 2;
-    grid-column: 2;
-    background-color: rgb(34, 34, 34);
-    color: white;
-    padding: 2%; 
-}
-
-
-
-.wrapper h2 {
-    text-align: center;
-}
-
-.hvordan-foregår-undervisningen {
-    grid-row: 3;
-    grid-column: 1;
-    padding: 2%;
-    background-color: rgb(142, 69, 133);
-    color: white;
-}
-
-.gruppearbeid-bilde {
-    grid-row: 3;
-    grid-column: 2;
-}
-
-.gruppearbeid-bilde>img {
-    object-fit: cover;
-    max-width: 100%;
-}
-
-
-.flere-studenthistorier-button {
+.flere-studenthistorier-button { /*under aside*/
     background-color: rgb(34, 34, 34);
     color: white;
     font-size: large;
@@ -261,7 +290,36 @@ margin-left: 5%
     border: none;
 }
 
+
 /* FOOTER */
+footer {
+    background-color: rgb(157, 141, 214);
+    margin-top: 5%;
+    padding-top: 1%;
+}
+
+.footer-wrapper {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+   /* overflow: hidden; */
+   /* padding-left: 30%; */
+}
+
+@media screen and (max-width: 768px) {
+    .footer-wrapper {
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr;
+    }
+}
+
+.footer-wrapper > * {
+    margin:1vw;
+}  /* gir mellomrom mellom boksene */
+
+.hold-deg-oppdatert {
+    padding-left: 3.5vw;
+}
+
 .nyhetsbrev-button {
     background-color: rgb(34, 34, 34);
     color: white;
@@ -274,4 +332,16 @@ margin-left: 5%
 .storbyuniversitetet-bilde {
     width: 400px;
     margin-top: 2%;
+}
+
+.annen-informasjon {
+    white-space: pre; /* Setter linkene på hver sin linje. Bedre accessibility enn <br> */
+}
+
+.sosiale-medier {
+    white-space: pre;
+}
+
+.kontakt-informasjon {
+    white-space: pre;
 }

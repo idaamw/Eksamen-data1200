@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!--responsive design: sørger for skalering-->
     <link rel="stylesheet" href="style.css">
     <title>Matematisk modellering og datavitenskap - ingeniør</title>
 </head>
@@ -41,9 +41,7 @@
         <hr>
     </section>
 
-    <section class="wrapper">
-
-        
+    <section class="wrapper">  
 
         <article class="hva-lærer-du">
         <h2>Hva lærer du?</h2>
@@ -74,9 +72,10 @@
             <a href="https://student.oslomet.no/studier/-/studieinfo/programplan/HINGMAMO/2024/H%C3%98ST"><p>Se programplan på student.oslomet.no</p></a>
         </article>
 
-        <section class="lilla-student-bilde">
+        <figure class="lilla-student-bilde"> <!--Bilde til "Hva lærer du?"-->
             <img class="lilla-student-bilde" src="bilder/lilla-student.jpeg" alt="Ingeniørstudent">
-        </section>
+        <figcaption>"lalalal"</figcaption>
+        </figure>
 
         <article class="hva-kan-du-jobbe-som">
             <h2>Hva kan du jobbe som?</h2>
@@ -86,9 +85,10 @@
             Datadrevne metoder og maskinlæring er i dag svært mye brukt i arbeidslivet.</p>
         </article>
 
-        <section class="koding-bilde">
+        <figure class="koding-bilde"> <!--Bilde til "Hva kan du jobbe som?"--> 
             <img class="koding-bilde" src="bilder/koding.jpg" alt="Koding">
-        </section>
+            <figcaption>kilde</figcaption>
+        </figure>
 
         <article class="hvordan-foregår-undervisningen">
             <h2>Hvordan foregår undervisningen?</h2>
@@ -107,9 +107,10 @@
             <p>For å gjennomføre studiet på normert tid, må du regne med å bruke om lag 40 timer per uke på studierelatert arbeid gjennom hele semesteret.</p>
         </article>
 
-        <section class="gruppearbeid-bilde">
+        <figure class="gruppearbeid-bilde"> <!--Bilde til "Hvordan foregår undervisningen?"-->
             <img src="bilder/gruppearbeid.jpeg" alt="Gruppearbeid">
-        </section>
+            <figcaption>kilde</figcaption>
+        </figure>
 
         <article class="videre-studiemuligheter">
             <h2>Videre studiemuligheter ved OsloMet</h2>
@@ -119,12 +120,9 @@
                     <p>Masterprogram | 2 år | Pilestredet i Oslo | Heltid</p>
                 </button>
             </a>
-        </article>
-
-        <section class="utveksling">
             <h2>Utveksling</h2>
             <p>Du kan dra på utveksling i femte semester.</p>
-        </section>
+        </article>
 
         <section class="hva-koster-det">
             <h2>Hva koster det?</h2>
@@ -263,23 +261,31 @@
             </table>
         </details>
 
-    </section>
+        
+
+    </section> <!--wrapper-->
     <!--burde <section> over være <article>?-->
 
+    <section>
     <h2>Studiested</h2>
     <p><a href="https://www.oslomet.no/om/studiested-pilestredet">Studiested Pilestredet</a></p>
 
     <h2>Spørsmål om utdanningen?</h2>
     <p><a href="https://www.oslomet.no/kontaktskjema#For%20utdanningss%C3%B8kere?faculty=Fakultet%20for%20teknologi,%20kunst%20og%20design">Har du spørsmål om utdanningen, kontakt oss gjennom vårt kontaktskjema.</a></p>
+    </section>
 
+    <section>
     <h2>Faglig leder</h2>
     <a href="https://www.oslomet.no/om/ansatt/krhel3944/">
     <button class="faglig-leder-button">
         <img class="kristoffer-bilde" src="bilder/krhel3944.png" alt="Faglig leder">
-        <h4>Kristoffer Herland Hellton</h4>
-        <h5>førsteamanuensis</h5>
+        <h3>Kristoffer Herland Hellton</h3>
+        <p>førsteamanuensis</p>
         <p>+47 672 37 240 | kristoffer.hellton@oslomet.no</p>
     </button></a>
+    </section>
+
+    
 
     <section>
     <h2>Du er kanskje også interessert i disse?</h2>
@@ -337,14 +343,49 @@
 </main>
 
 <footer>
-    <h2>Hold deg oppdatert på hva som skjer på OsloMet.</h2>
-    <button class="nyhetsbrev-button">Abonner på vårt nyhetsbrev!</button>
-    <br>
-    <img class="storbyuniversitetet-bilde" src="bilder/oslomet-storbyuniversitetet-skrift.png" alt="Oslo Metropolitan University - Storbyuniversitetet">
-    <p>Postboks 4, St. Olavs plass
-        <br>0130 Oslo
-        <br>Tlf.: 67 23 50 00
-        <br><a href="https://www.oslomet.no/om/kontakt">Kontakt oss</a></p>
+    <section class="hold-deg-oppdatert">
+        <h2>Hold deg oppdatert på hva som skjer på OsloMet.</h2>
+        <button class="nyhetsbrev-button">Abonner på vårt nyhetsbrev!</button>
+           
+    </section>
+
+    <section class="footer-wrapper">
+    
+    <section class="kontakt-informasjon">
+        <img class="storbyuniversitetet-bilde" src="bilder/oslomet-storbyuniversitetet-skrift.png" alt="Oslo Metropolitan University - Storbyuniversitetet">
+        <p>
+        Postboks 4, St. Olavs plass
+        0130 Oslo
+        Tlf.: 67 23 50 00
+        <a href="https://www.oslomet.no/om/kontakt">Kontakt oss</a>
+        </p>
+    </section>
+
+    <section class="annen-informasjon">
+    <nav> <!--Riktig tag?-->
+        <a href="">English</a>
+        <a href="">Alumni</a>
+        <a href="">Ansatteoversikt</a>
+        <a href="">For ansatte</a>
+        <a href="">For studenter</a>
+        <a href="">Ledige stillinger</a>
+        <a href="">Personvernerklæring og informasjonskapslar</a>
+        <a href="">Pressekontakt</a>
+        <a href="">Tilgjengelighetserklæring</a>
+        <a href="">Admin</a>
+    </nav>
+    </section>
+
+    <section class="sosiale-medier">
+    <nav>
+        <a href="">Facebook</a>
+        <a href="">X (Twitter)</a>
+        <a href="">LinkedIn</a>
+        <a href="">Instagram</a>
+    </nav>
+    </section>
+</section>
+    
     
     <!--Missing content-->
 
