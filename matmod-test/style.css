@@ -1,8 +1,8 @@
 body {
     font-family: Moderat, Avenir, Helvetica, Arial; /* må endres */ 
-   /* background-color: rgb(34, 34, 34);
-    color: white;
-    */
+    /*background-color: rgb(34, 34, 34);
+    color: white;*/
+
 }
 
 h1{
@@ -71,6 +71,13 @@ header a {
     text-align: center;
 } 
 
+.matmod-hovedbilde>img, .matmod-hovedbilde figcaption {
+    display: block;
+    margin-left: auto;
+    margin-right: auto; /* midtstiller bildet */
+    max-width: 70%; /* Burde være større på mindre skjermer */
+}
+
 .ingress {
     margin-left: 25%;
     margin-right: 25%;
@@ -78,15 +85,15 @@ header a {
     margin-bottom: 35px;
 }
 
-.oversikt-tabell, th, td { /*MÅ FIKSES MTP PÅ SKALERING*/
-    border-spacing: 20px;
-    color: black;
-    text-align: left;
-}
-
 .oversikt-tabell{
     margin-left: auto;
     margin-right: auto; /* Plasserer tabellen midt på siden (horisontalt)*/
+}
+
+.oversikt-tabell, .oversikt-tabell th, .oversikt-tabell td { /*MÅ FIKSES MTP PÅ SKALERING*/
+    border-spacing: 20px;
+    color: black;
+    text-align: left;
 }
 
 td {
@@ -99,10 +106,8 @@ details > summary {
     list-style: none;
   }
 details > summary::-webkit-details-marker {
-    display: none;
+    display: none; /*tar bort pilen over details*/
   }
-
-
 
 
 .oppbygging-tabell {
@@ -134,80 +139,98 @@ details > summary::-webkit-details-marker {
 .main-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(500px, 1fr)) /* Juster minimum px */
-}
+} 
 
 
- @media screen and (max-width: 768px) {
+ @media screen and (max-width: 768px) { 
     .main-grid {
         grid-template-columns: 1fr;
         grid-template-rows: 1fr;
     }
-} /* ????? */
+} /* når skjermen er mindre enn max-width, ... */
 
 .main-grid > * {
     margin:1vw;
 }  /* gir mellomrom mellom boksene */
 
-.hva-lærer-du, .lilla-student-bilde, .hva-kan-du-jobbe-som, .koding-bilde {
-    grid-column: auto;
-    grid-row: auto;
-}
-
 .main-grid h2 {
     text-align: center;
 }
 
-/* Boks 1 */
-.hva-lærer-du { 
-    background-color: rgb(218, 228, 236);
+.main-grid p {
     padding: 2%;
 }
 
-/* Boks 2 */
-.lilla-student-bilde { 
-    justify-content: normal;
+.main-grid details, .main-grid button {
+    margin-left: 2%;
+} 
+
+
+/* Boks 1 */
+.hva-lærer-du { 
+    background-color: rgb(218, 228, 236);
 }
 
+/* Boks 2 */
 .lilla-student-bilde>img {
     object-fit: cover; /* cover sørger for at containeren alltid fylles opp av bildet */
     max-width: 100%;
 } 
 
 /* Boks 3*/
-.koding-bilde {
+.koding-bilde>img {
+    object-fit: cover;
     max-width: 100%;
 }
 
 /* Boks 4*/
 .hva-kan-du-jobbe-som {
     background-color: rgb(34, 34, 34);
-    color: white;
-    padding: 2%; 
+    color: white; 
 }
 
-
+/* Boks 5 */
 .hvordan-foregår-undervisningen {
-    padding: 2%;
-    background-color: rgb(142, 69, 133);
+    background-color: rgb(183, 146, 57);
     color: white;
 }
 
-
+/* Boks 6 */
 .gruppearbeid-bilde>img {
     object-fit: cover;
     max-width: 100%;
 } 
 
-.videre-studiemuligheter {
+/*Boks 7 */
+.robot-bilde>img {
+    object-fit: cover;
+    max-width: 100%;
+}
+
+
+/* Boks 8 */
+.videre-studiemuligheter, .videre-studiemuligheter button {
     background-color: rgb(157, 141, 214);
 }
 
+/* Boks 9 */
 .hva-koster-det {
     background-color:  rgb(218, 228, 236);
 }
 
+/* Boks 10 */
+.digital-bilde>img {
+    object-fit: cover;
+    max-width: 100%;
+}
+
 .opptakskrav-og-poeng, .opptakskrav-og-poeng a {
     background-color: rgb(34, 34, 34);
+    color: white;
+}
+
+.slik-søker-du, .slik-søker-du a {
+    background-color: rgb(183, 146, 57);
     color: white;
 }
 
@@ -225,7 +248,7 @@ margin-left: 5%
 
 
 .andre-studier-button {
-    background-color: white;
+    background-color: rgb(218, 228, 236);
     border: none;
     text-align: left;
     padding: 3%;
@@ -342,7 +365,7 @@ footer {
     margin-top: 2%;
 }
 
-.annen-informasjon {
+.footer-informasjon {
     white-space: pre; /* Setter linkene på hver sin linje. Bedre accessibility enn <br> */
 }
 
@@ -353,3 +376,11 @@ footer {
 .kontakt-informasjon {
     white-space: pre;
 }
+
+
+
+/* FARGER
+
+rosalilla rgb(142, 69, 133);
+
+*/
