@@ -134,11 +134,11 @@ details > summary::-webkit-details-marker {
     border: dashed 1px;
 }
 
-tbody tr:nth-child(odd) {
+.oppbygging-tabell tbody tr:nth-child(odd) {
     background-color: rgb(218, 228, 236);
 }
 
-tbody tr:nth-child(even) {
+.oppbygging-tabell tbody tr:nth-child(even) {
     background-color: rgb(195, 227, 255);
 }
 
