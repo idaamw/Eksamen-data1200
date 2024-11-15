@@ -406,6 +406,119 @@ footer {
     white-space: pre;
 }
 
+/*styling for aktivitetsside*/
+    /* Bakgrunnsbilde for hele siden*/
+    body.aktivitetsside {
+        background-image: url('bilder/molde.jpg');
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+    }
+    .aktivitetsside .innledning{
+        padding: 1rem;
+    }
+    .aktivitetsside .innledning p{
+        font-size: large;
+    }
+
+      /* stil for aktivitetene, posisjon og tekst*/
+    .aktivitetsside .aktiviteter {
+        position: relative;
+        background-size: cover;
+        background-position: center;
+        height: 300px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: white;
+        text-align: center;
+        border-radius: 8px;
+        overflow: hidden;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    }
+    
+    /* oppsett for innholdet på aktivitetene*/
+    .aktivitetsside .aktivitetsoppsett {
+        background: rgba(0, 0, 0, 0.5);
+        padding: 20px;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    /* stil for text i aktivitetene*/
+    .aktivitetsside .aktiviteter h2 {
+        font-size: 1.5rem;
+        margin: 0;
+    }
+    
+    .aktivitetsside .aktiviteter p {
+        font-size: 1rem;
+        margin: 10px 0;
+    }
+
+    /* stil og effekt for knappene på aktivitetene*/
+    .aktivitetsside .aktivitet-knapp {
+        background-color: #9D8DD6;
+        color: white;
+        padding: 10px 20px;
+        border: none;
+        border-radius: 5px;
+        font-size: 1rem;
+        cursor: pointer;
+    }
+    
+    .aktivitetsside .aktivitet-knapp:hover {
+        background-color: #7C69C2;
+        transform: scale(1.05);
+    }
+    
+    .aktivitetsside .turutstyr, .aktivitetsside .turruter , .aktivitetsside .sikkerhetstips, .aktivitetsside .turutstyr a , .aktivitetsside .turruter a{
+        color:white
+
+    }
+    .aktivitetsside .turutstyr a , .aktivitetsside .turruter a {
+        font-size: 16px;
+        font-weight: normal;
+    }
+
+    .aktivitetsside .sosiale-medier h2{
+       align-content: left;
+
+    }
+    
+    .aktivitetsside .kontakt-informasjon , .sosiale-medier {
+        margin-left: 7%;
+    }
+
+    .aktivitetsside .sosiale-medier ul {
+        list-style: none;
+        display: flex;
+        justify-content: left;
+    }
+    
+    /* stil for sosiale medier lenker*/
+    .aktivitetsside .sosiale-medier ul li a{
+        color: white;
+        margin: 20px;
+        font-size: 1.2em;
+        text-decoration: none;
+        opacity: 0.7;
+        transition: 0.5s;
+    }
+
+    .aktivitetsside .sosiale-medier ul li a:hover{
+        opacity: 1;
+    }
+
+    /* stil for teksten i aktivitetsoppsett*/ 
+    .aktivitetsside .aktivitetsoppsett p{
+        opacity: 0.8;
+    }
+    
 
 
 /* FARGER
