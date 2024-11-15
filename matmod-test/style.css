@@ -1,8 +1,6 @@
 body {
+    margin: 0;
     font-family: Moderat, Avenir, Helvetica, Arial; /* må endres */ 
-    /*background-color: rgb(34, 34, 34);
-    color: white;*/
-
 }
 
 h1{
@@ -18,7 +16,7 @@ h3 {
 }
 
 a {
-    text-decoration: none;  /*endres*/
+    text-decoration: none;
     color: black;
     font-weight: 600;
 }
@@ -32,11 +30,10 @@ figcaption {
     font-size: small;
 }
 
-
 /*HEADER*/
 header {
     background-color: rgb(157, 141, 214);
-    height: 4fr;
+    height: 80px;
     margin: 0px;
     padding: 0px;
 }
@@ -58,11 +55,22 @@ header a {
     margin-top: 1%;
 }
 
- /* @media screen and (max-width: 500px) {
+@media screen and (max-width: 800px) {
     header {
-        height: 500px;    
+        height: 100px;   
+        
     }
-} /* Bestemmer header for skjermer under x px */
+
+    header>nav {
+        white-space: pre;
+        text-align: right;
+        margin-top: 0px;
+    }
+
+    header a {
+        padding-right: 10px;
+    }  
+} 
 
 
 
@@ -83,11 +91,14 @@ header a {
     margin-right: 25%;
     margin-top: 35px;
     margin-bottom: 35px;
+    font-size: large;
 }
 
 .oversikt-tabell{
     margin-left: auto;
     margin-right: auto; /* Plasserer tabellen midt på siden (horisontalt)*/
+    overflow-x: auto; /* Enable horizontal scrolling */ 
+    -webkit-overflow-scrolling: touch; /* For smooth scrolling on mobile */ 
 }
 
 .oversikt-tabell, .oversikt-tabell th, .oversikt-tabell td { /*MÅ FIKSES MTP PÅ SKALERING*/
@@ -96,13 +107,28 @@ header a {
     text-align: left;
 }
 
+@media screen and (max-width: 800px) {
+    .oversikt-tabell {
+        width: 100%;
+        max-width: 100%;
+        border-spacing: 5px;
+        font-size: 12px;   
+    }
+}
+
 td {
     vertical-align: top;
+}
+
+.bachelorprogram {
+    font-size: large;
+    font-weight: 600;
 }
 
 
 /* DETAILS*/
 .studiets-oppbygging {
+    background-color: rgb(218, 228, 236);
     margin: 2%;
 
 }
@@ -158,10 +184,23 @@ details > summary::-webkit-details-marker {
  @media screen and (max-width: 768px) { 
     .main-grid, .second-grid {
         grid-template-columns: 1fr;
-        grid-template-rows: 1fr;
+        /*grid-template-rows: 1fr;*/
     }
-} /* når skjermen er mindre enn max-width, ... */
 
+    .hva-kan-du-jobbe-som {order: 0;}
+    .lilla-student-bilde {order: 1;}
+    .hva-kan-du-jobbe-som {order: 2;}
+    .robot-bilde {order: 3;}
+    .hvordan-foregår-undervisningen {order: 4;}
+    .gruppearbeid-bilde {order: 5;}
+    .videre-studiemuligheter {order: 6;}
+    .undervisning-bilde {order: 7;}
+    .opptakskrav-og-poeng {order: 8;}
+    .digital-bilde {order: 9;}
+    .hva-koster-det {order: 10;}
+    .slik-søker-du {order: 11;}
+    /*Sørger for plassering i riktig rekkefølge*/
+} 
 
 
 .main-grid > * , .second-grid > *{
@@ -184,80 +223,47 @@ details > summary::-webkit-details-marker {
     padding-left: 2%;
 }
 
-
-/* Boks 1 */
-.hva-lærer-du { 
-    background-color: rgb(218, 228, 236);
-}
-
-/* Boks 2 */
-.lilla-student-bilde>img {
+/* Bilder */
+.lilla-student-bilde>img, .robot-bilde>img, .gruppearbeid-bilde>img, .undervisning-bilde>img, .digital-bilde>img  {
     object-fit: cover; /* cover sørger for at containeren alltid fylles opp av bildet */
     max-width: 100%;
 } 
 
-/* Boks 3*/
-.koding-bilde>img {
-    object-fit: cover;
-    max-width: 100%;
+.hva-lærer-du { 
+    background-color: rgb(218, 228, 236);
 }
 
-/* Boks 4*/
+
 .hva-kan-du-jobbe-som {
     background-color: rgb(34, 34, 34);
     color: white; 
 }
 
-/* Boks 5 */
 .hvordan-foregår-undervisningen {
     background-color: rgb(103, 134, 144);
     color: white;
 }
 
-/* Boks 6 */
-.gruppearbeid-bilde>img {
-    object-fit: cover;
-    max-width: 100%;
-} 
-
-/*Boks 7 */
-.robot-bilde>img {
-    object-fit: cover;
-    max-width: 100%;
-}
-
-
-/* Boks 8 */
 .videre-studiemuligheter, .videre-studiemuligheter button {
     background-color: rgb(157, 141, 214);
 }
 
-/* Boks 9 */
 .hva-koster-det {
     background-color:  rgb(218, 228, 236);
 }
 
-/* Boks 10 */
-.digital-bilde>img {
-    object-fit: cover;
-    max-width: 100%;
-}
-
-/* Boks 11 */
 .opptakskrav-og-poeng, .opptakskrav-og-poeng a {
     background-color: rgb(34, 34, 34);
     color: white;
 }
 
-
-/* Boks 12 */
 .slik-søker-du, .slik-søker-du a {
     background-color: rgb(103, 134, 144);
     color: white;
 }
 
 
-/* Boks 14 (second grid) */
+/* (second grid) */
 
 .kristoffer-bilde {
     width: 30%;
@@ -367,16 +373,8 @@ footer {
 
 .footer-wrapper {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-   /* overflow: hidden; */
-   /* padding-left: 30%; */
-}
-
-@media screen and (max-width: 768px) {
-    .footer-wrapper {
-        grid-template-columns: 1fr;
-        grid-template-rows: 1fr;
-    }
+    grid-template-columns: repeat(auto-fit, minmax(6px, 1fr));
+    overflow: hidden;
 }
 
 .footer-wrapper > * {
@@ -401,17 +399,33 @@ footer {
     margin-top: 2%;
 }
 
-.footer-informasjon {
-    white-space: pre; /* Setter linkene på hver sin linje. Bedre accessibility enn <br> */
+.kontakt-informasjon ul, .footer-informasjon ul, .sosiale-medier ul {
+    list-style-type: none;
 }
 
-.sosiale-medier {
-    white-space: pre;
+/* FOR MOBILTELEFON */
+@media screen and (max-width: 800px) { /*For mobil-skjermer */
+    
+    .footer-wrapper {
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr; /* ??? */
+    }
+    .footer-wrapper > * {
+        padding-top: 0%;
+    }
+
+    .kontakt-informasjon ul, .footer-informasjon ul, .sosiale-medier ul {
+        padding: 5px;
+    }
+
+    .hold-deg-oppdatert {
+        padding: 5px;
+        /* Sørger for padding også på høyre siden på veldig små skjermer, som iPhone SE */
+    } 
 }
 
-.kontakt-informasjon {
-    white-space: pre;
-}
+
+
 
 /*styling for aktivitetsside*/
     /* Bakgrunnsbilde for hele siden*/
@@ -526,10 +540,3 @@ footer {
         opacity: 0.8;
     }
     
-
-
-/* FARGER
-
-rosalilla rgb(142, 69, 133);
-
-*/
