@@ -130,7 +130,6 @@ td {
 .studiets-oppbygging {
     background-color: rgb(218, 228, 236);
     margin: 2%;
-
 }
 
 details > summary {
@@ -158,6 +157,7 @@ details > summary::-webkit-details-marker {
 
 .oppbygging-tabell th, .oppbygging-tabell td {
     border: dashed 1px;
+    vertical-align: middle;
 }
 
 .oppbygging-tabell tbody tr:nth-child(odd) {
@@ -181,7 +181,7 @@ details > summary::-webkit-details-marker {
 } 
 
 
- @media screen and (max-width: 768px) { 
+ @media screen and (max-width: 800px) { 
     .main-grid, .second-grid {
         grid-template-columns: 1fr;
         /*grid-template-rows: 1fr;*/
@@ -228,6 +228,11 @@ details > summary::-webkit-details-marker {
     object-fit: cover; /* cover sørger for at containeren alltid fylles opp av bildet */
     max-width: 100%;
 } 
+
+picture>img {
+    object-fit: cover; /* cover sørger for at containeren alltid fylles opp av bildet */
+    max-width: 100%;
+}
 
 .hva-lærer-du { 
     background-color: rgb(218, 228, 236);
@@ -404,7 +409,7 @@ footer {
 }
 
 /* FOR MOBILTELEFON */
-@media screen and (max-width: 800px) { /*For mobil-skjermer */
+@media screen and (max-width: 800px) { 
     
     .footer-wrapper {
         grid-template-columns: 1fr;
@@ -423,6 +428,83 @@ footer {
         /* Sørger for padding også på høyre siden på veldig små skjermer, som iPhone SE */
     } 
 }
+
+/* DESKTOP */
+@media screen and (min-width: 2000px) { 
+    header {
+        height: 125px;
+    }
+
+    header nav {
+        font-size: xx-large;
+    }
+
+    h1 {
+        font-size: 2vw;
+    }
+
+    h2 {
+        font-size: 1.5vw;
+    }
+
+    p, ul {
+        font-size: 1vw;
+    }
+
+    .oversikt-tabell {
+        font-size: 1.4vw;
+    }
+
+    .main-grid, .second-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .lilla-student-bilde {order: 0;}
+    .hva-kan-du-jobbe-som {order: 1;}
+    .hva-kan-du-jobbe-som {order: 2;}
+    .robot-bilde {order: 3;}
+    .hvordan-foregår-undervisningen {order: 4;}
+    .gruppearbeid-bilde {order: 5;}
+    .videre-studiemuligheter {order: 6;}
+    .undervisning-bilde {order: 7;}
+    .opptakskrav-og-poeng {order: 8;}
+    .digital-bilde {order: 9;}
+    .hva-koster-det {order: 10;}
+    .slik-søker-du {order: 11;}
+
+    .second-grid {
+        margin-left: 7.5%;
+    }
+
+    .andre-studier {
+        width: 85%;
+        margin-left: 7.5%;
+        margin-right: 7.5%;  
+    }
+
+    .andre-studier button {
+        font-size: large;
+    }
+
+    .studiested-og-spørsmål h2, .studiested-og-spørsmål p {
+        padding-left: 0;
+    }
+
+    .studiested-og-spørsmål, .faglig-leder {
+        margin-left: 0;
+    }
+
+    .studiets-oppbygging {
+        margin-left: 7.5%;
+        margin-right: 7.5%;
+    }
+
+    .oppbygging-tabell {
+        width: 100%;
+    }
+
+}
+
 
 
 

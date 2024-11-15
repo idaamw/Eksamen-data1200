@@ -20,7 +20,7 @@
 
     <main> <!--sidens hovedinnhold-->
         <figure class="matmod-hovedbilde">
-            <img src="bilder/matmod-hovedbilde.jpeg" alt="Student i matematisk modellering og datavitenskap">
+            <img src="bilder/matmod-hovedbilde.jpeg" alt="Student i matematisk modellering og datavitenskap jobber på pc">
             <figcaption>Adobe Stock</figcaption>
         </figure>
 
@@ -79,12 +79,18 @@
             </article>
 
             <figure class="lilla-student-bilde"> <!--Bilde til "Hva lærer du?"-->
-                <img src="bilder/lilla-student.jpeg" alt="ingeniørstudent som holder pc">
+                <img src="bilder/lilla-student.jpeg" alt="ingeniørstudent som holder bærbar pc">
             <figcaption>Adobe Stock</figcaption>
             </figure>
 
-            <figure class="robot-bilde"> <!--Bilde til "Hva kan du jobbe som?"--> 
-                <img src="bilder/robot.jpeg" alt="kvinne og robot">
+            <figure class="robot-bilde">
+                <picture>
+                    <source media="(min-width: 1024px)" srcset="bilder/robot-large.jpeg">
+                   <!-- <source media="(min-width: 768px)" srcset="bilder/robot-medium.jpeg">
+                    <source media="(max-width: 767px)" srcset="bilder/robot-small.jpeg"> -->
+                <img src="bilder/robot.jpeg" alt="Bilde av kvinne og robot"> <!--Dersom nettleseren ikke støtter <picture> taggen, 
+                    eller dimensjonene over ikke er gjeldende, vil <img> gjelde.-->
+                </picture>
                 <figcaption>Adobe Stock</figcaption>
             </figure>
 
@@ -114,7 +120,7 @@
             </article>
 
             <figure class="gruppearbeid-bilde"> <!--Bilde til "Hvordan foregår undervisningen?"-->
-                <img src="bilder/gruppearbeid.jpeg" alt="gruppearbeid">
+                <img src="bilder/gruppearbeid.jpeg" alt="4 studenter samarbeider og ler sammen">
                 <figcaption>Adobe Stock</figcaption>
             </figure>
 
@@ -148,7 +154,7 @@
             </article>
 
             <figure class="digital-bilde">
-                <img src="bilder/digital.jpeg" alt="">
+                <img src="bilder/digital.jpeg" alt="mann jobber med modellering på skjerm">
                 <figcaption>Adobe Stock</figcaption>
             </figure>
 
@@ -340,7 +346,7 @@
 
         <h2 class="studenthistorier-h2">Studenthistorier</h2>
         <aside class="spa-fremtiden-aside">
-            <img class="smilefjes-bilde" src="bilder/matematikk-smilefjes.jpg" alt="">
+            <img class="smilefjes-bilde" src="bilder/matematikk-smilefjes.jpg" alt="2 ansatte ved OsloMet holder pc og smiler til kamera">
             <a href="https://www.oslomet.no/studier/studenthistorier?student_story=147"><h5>Teknologi og design</h5></a>
             <a href="https://www.oslomet.no/studier/studenthistorier/spa-fremtiden-matematikk-datavitenskap">
                 <h2 class="spa-fremtiden-overskrift">Spå fremtiden med matematikk og datavitenskap</h2>
