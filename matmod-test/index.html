@@ -9,7 +9,12 @@
 
 <body>
     <header>
-        <img class="oslomet-logo"src="bilder/oslomet-logo-transparent.png" alt="Oslomet-logo">
+        <picture>
+            <source media="(min-width: 2000px)" srcset="bilder/oslomet-logo-transparent-large.webp">
+               <!-- <source media="(min-width: 768px)" srcset="bilder/robot-medium.jpeg">
+                <source media="(max-width: 767px)" srcset="bilder/robot-small.jpeg"> -->
+            <img class="oslomet-logo"src="bilder/oslomet-logo-transparent.png" alt="Oslomet-logo">
+        </picture>
         <nav> <!--<nav> tag brukes for menyer over navigering(linker) til andre sider-->
             <a href="accessibility.html">Accessibility</a>
             <a href="github.html">Github</a>
@@ -20,7 +25,12 @@
 
     <main> <!--sidens hovedinnhold-->
         <figure class="matmod-hovedbilde">
-            <img src="bilder/matmod-hovedbilde.jpeg" alt="Student i matematisk modellering og datavitenskap jobber på pc">
+            <picture>
+                <source media="(min-width: 2000px)" srcset="bilder/matmod-hovedbilde-large.webp">
+                   <!-- <source media="(min-width: 768px)" srcset="bilder/robot-medium.jpeg">
+                    <source media="(max-width: 767px)" srcset="bilder/robot-small.jpeg"> -->
+                <img src="bilder/matmod-hovedbilde.jpeg" alt="Student i matematisk modellering og datavitenskap jobber på pc">
+            </picture>
             <figcaption>Adobe Stock</figcaption>
         </figure>
 
@@ -84,6 +94,7 @@
                    <!-- <source media="(min-width: 768px)" srcset="bilder/robot-medium.jpeg">
                     <source media="(max-width: 767px)" srcset="bilder/robot-small.jpeg"> -->
                     <img src="bilder/lilla-student.jpeg" alt="ingeniørstudent som holder bærbar pc">
+                   <!--img taggen er til å falle tilbake på dersom bildene i picture tag ikke funker--> 
                 </picture>
                 <figcaption>Adobe Stock</figcaption>  
             </figure>
@@ -364,7 +375,12 @@
 
         <h2 class="studenthistorier-h2">Studenthistorier</h2>
         <aside class="spa-fremtiden-aside">
-            <img class="smilefjes-bilde" src="bilder/matematikk-smilefjes.jpg" alt="2 ansatte ved OsloMet holder pc og smiler til kamera">
+            <picture>
+                <source media="(min-width: 2000px)" srcset="bilder/matematikk-smilefjes-large.webp">
+                   <!-- <source media="(min-width: 768px)" srcset="bilder/robot-medium.jpeg">
+                    <source media="(max-width: 767px)" srcset="bilder/robot-small.jpeg"> -->
+                <img class="smilefjes-bilde" src="bilder/matematikk-smilefjes.jpg" alt="2 ansatte ved OsloMet holder pc og smiler til kamera">
+            </picture>
             <a href="https://www.oslomet.no/studier/studenthistorier?student_story=147"><h5>Teknologi og design</h5></a>
             <a href="https://www.oslomet.no/studier/studenthistorier/spa-fremtiden-matematikk-datavitenskap">
                 <h2 class="spa-fremtiden-overskrift">Spå fremtiden med matematikk og datavitenskap</h2>
@@ -389,7 +405,12 @@
         <section class="footer-wrapper">
         
             <section class="kontakt-informasjon">
-                <img class="storbyuniversitetet-bilde" src="bilder/oslomet-storbyuniversitetet-skrift.png" alt="Oslo Metropolitan University - Storbyuniversitetet">
+                <picture>
+                    <source media="(min-width: 2000px)" srcset="bilder/oslomet-storbyuniversitetet-skrift-large.webp">
+                       <!-- <source media="(min-width: 768px)" srcset="bilder/robot-medium.jpeg">
+                        <source media="(max-width: 767px)" srcset="bilder/robot-small.jpeg"> -->
+                    <img class="storbyuniversitetet-bilde" src="bilder/oslomet-storbyuniversitetet-skrift.png" alt="Oslo Metropolitan University - Storbyuniversitetet">
+                </picture>
                 <ul>
                     <li>Postboks 4, St. Olavs plass</li>
                     <li>0130 Oslo</li>
@@ -399,7 +420,7 @@
             </section>
 
             <section class="footer-informasjon">
-                <nav> <!--Navigation(meny). unødvendig bruk?-->
+                <nav> 
                     <ul>
                         <li><a href="https://www.oslomet.no/en">English</a></li>
                         <li><a href="https://www.oslomet.no/alumni">Alumni</a></li>

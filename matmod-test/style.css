@@ -21,6 +21,10 @@ a {
     font-weight: 600;
 }
 
+img {
+    max-width: 100%;
+}
+
 button:hover, a:hover { 
     cursor: pointer; /*Museknappen endrer seg til hånd når den er over linker og knapper*/
 }
@@ -61,12 +65,13 @@ header a {
     text-align: center;
 } 
 
-.matmod-hovedbilde>img, .matmod-hovedbilde figcaption {
-    display: block;
+.matmod-hovedbilde figcaption {
+    position: relative;}
+
+.matmod-hovedbilde {
     margin-left: auto;
     margin-right: auto; /* midtstiller bildet */
-    max-width: 70vw; /* Burde være større på mindre skjermer */
-    position: relative;
+    max-width: 70vw;
 }
 
 
@@ -90,15 +95,6 @@ header a {
     border-spacing: 20px;
     color: black;
     text-align: left;
-}
-
-@media screen and (max-width: 800px) {
-    .oversikt-tabell {
-        width: 100%;
-        max-width: 100%;
-        border-spacing: 5px;
-        font-size: 12px;   
-    }
 }
 
 td {
@@ -185,7 +181,7 @@ details > summary::-webkit-details-marker {
     padding-left: 2%;
 }
 
-/* Bilder */
+/* Bilder i hoved-grid */
 
 .lilla-student-bilde>img, .robot-bilde>img, .gruppearbeid-bilde>img, .undervisning-bilde>img, .digital-bilde>img  {
     object-fit: cover; /* cover sørger for at containeren alltid fylles opp av bildet */
@@ -375,18 +371,26 @@ footer {
 .storbyuniversitetet-bilde {
     width: 400px;
     margin-top: 2%;
+    margin-left: 40px; /* for å matche listene i footer sin padding */
 }
 
 .kontakt-informasjon ul, .footer-informasjon ul, .sosiale-medier ul {
     list-style-type: none;
 }
 
+.kontakt-informasjon li, .footer-informasjon li, .sosiale-medier li {
+    padding-bottom: 1.5%;
+}
+
+.sosiale-medier li {
+    padding-bottom: 2%;
+}
+
 /* FOR MOBILTELEFON */
 @media screen and (max-width: 800px) { 
 
     header {
-        height: 100px;   
-        
+        height: 100px;      
     }
 
     header>nav {
@@ -398,6 +402,13 @@ footer {
     header a {
         padding-right: 10px;
     }  
+
+    .oversikt-tabell {
+        width: 100%;
+        max-width: 100%;
+        border-spacing: 5px;
+        font-size: 12px;   
+    }
     
     .main-grid, .second-grid {
         grid-template-columns: 1fr;
@@ -460,9 +471,10 @@ footer {
         font-size: 1vw;
     }
 
-    .matmod-hovedbilde>img {
-        width: 90vw;
-    }
+    .matmod-hovedbilde{
+        max-width: 75vw;
+        margin-top: 1.5vw;
+    } 
 
     .bachelorprogram {
         font-size: 1.4vw;
@@ -545,9 +557,15 @@ footer {
         font-size: 1vw;
     }
 
+    .footer-wrapper {
+        padding-left: 25px;
+        padding-top: 2vw;
+    }
+
+    .storbyuniversitetet-bilde {
+        width: 600px;
+    }
 }
-
-
 
 
 
