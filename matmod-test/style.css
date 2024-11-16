@@ -307,22 +307,26 @@ margin-left: 5%
 .spa-fremtiden-aside h2 {
     padding-left: 4%;
     padding-top: 3%;
+    padding-right: 50%;
 }
 
 .spa-fremtiden-aside h5 {
     padding-left: 4%;
     padding-top: 2%;
     font-size: medium;
+    padding-right: 50%;
 }
 
 .spa-fremtiden-aside p {
     padding-left: 4%;
     font-size: medium;
+    padding-right: 50%; /*sørger for at teksten ikke strekker seg forbi bildekanten */
 }
 
 
 .smilefjes-bilde {
-    width: 50%;
+    max-width: 50%;
+    height: auto;
     float: right;
 }
 
@@ -387,7 +391,7 @@ footer {
 }
 
 /* FOR MOBILTELEFON */
-@media screen and (max-width: 800px) { 
+@media screen and (max-width: 600px) { 
 
     header {
         height: 100px;      
@@ -403,17 +407,41 @@ footer {
         padding-right: 10px;
     }  
 
+    .oslomet-logo {
+        width: 75px;
+        margin-left: 25px;
+        margin-top: 25px;
+    }
+
+    h1 {
+        font-size: 7vw;
+    }
+
+    figcaption {
+        position: relative;
+    }
+
+    .matmod-hovedbilde {
+        max-width: 98vw;
+        margin-top: 0.5vw;
+    }
+
     .oversikt-tabell {
         width: 100%;
         max-width: 100%;
         border-spacing: 5px;
         font-size: 12px;   
     }
+
+    .ingress {
+        font-size: 3.5vw;
+    }
     
     .main-grid, .second-grid {
         grid-template-columns: 1fr;
         /*grid-template-rows: 1fr;*/ 
-    }
+        grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)) /* Juster minimum px */
+    } 
 
     .hva-kan-du-jobbe-som {order: 0;}
     .lilla-student-bilde {order: 1;}
@@ -428,8 +456,7 @@ footer {
     .hva-koster-det {order: 10;}
     .slik-søker-du {order: 11;}
     /*Sørger for plassering i riktig rekkefølge*/
-    
-    
+
     .footer-wrapper {
         grid-template-columns: 1fr;
         grid-template-rows: 1fr; /* ??? */
@@ -446,6 +473,29 @@ footer {
         padding: 5px;
         /* Sørger for padding også på høyre siden på veldig små skjermer, som iPhone SE */
     } 
+
+    .spa-fremtiden-aside h2, .spa-fremtiden-aside h5, .spa-fremtiden-aside p {
+        padding-right: 4%;
+    }
+
+    .smilefjes-bilde {
+        display: none;
+    }
+
+    .footer-informasjon ul, .sosiale-medier ul {
+        margin-top: 0;
+    }
+
+    .footer-informasjon li, .sosiale-medier li {
+        padding-bottom: 1px;
+    }
+
+    .storbyuniversitetet-bilde {
+        width: 350px;
+        margin-left: 5px;
+    }
+    
+      
 }
 
 
@@ -567,6 +617,24 @@ footer {
     }
 }
 
+/*FOR NETTBRETT */
+@media screen and (max-width: 1024px) { /* bredden til iPad Pro */
+    .lilla-student-bilde {order: 0;}
+    .hva-kan-du-jobbe-som {order: 1;}
+    .hva-kan-du-jobbe-som {order: 2;}
+    .robot-bilde {order: 3;}
+    .hvordan-foregår-undervisningen {order: 4;}
+    .gruppearbeid-bilde {order: 5;}
+    .videre-studiemuligheter {order: 6;}
+    .undervisning-bilde {order: 7;}
+    .opptakskrav-og-poeng {order: 8;}
+    .digital-bilde {order: 9;}
+    .hva-koster-det {order: 10;}
+    .slik-søker-du {order: 11;}
+}
+/*for nettbrett fungerer siden i utgangspunktet greit uten tilpasninger, 
+men rekkefølgen på boksene må endres da de vil vises i 1 kolonne, som på mobiltelefon. /*
+
 
 
 /*styling for aktivitetsside*/
@@ -648,23 +716,19 @@ footer {
         font-weight: normal;
     }
 
-    .aktivitetsside .sosiale-medier h2{
+    .aktivitetsside .sosiale-medier-aktivitetsside h2{
        align-content: left;
 
     }
-    
-    .aktivitetsside .kontakt-informasjon , .sosiale-medier {
-        margin-left: 7%;
-    }
 
-    .aktivitetsside .sosiale-medier ul {
+    .aktivitetsside .sosiale-medier-aktivitetsside ul {
         list-style: none;
         display: flex;
         justify-content: left;
     }
     
-    /* stil for sosiale medier lenker*/
-    .aktivitetsside .sosiale-medier ul li a{
+     /*stil for sosiale medier lenker*/
+    .aktivitetsside .sosiale-medier-sktivitetsside ul li a{
         color: white;
         margin: 20px;
         font-size: 1.2em;
@@ -673,7 +737,7 @@ footer {
         transition: 0.5s;
     }
 
-    .aktivitetsside .sosiale-medier ul li a:hover{
+    .aktivitetsside .sosiale-medier-aktivitetsside ul li a:hover{
         opacity: 1;
     }
 
