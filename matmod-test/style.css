@@ -28,6 +28,7 @@ button:hover, a:hover {
 figcaption {
     color: gray;
     font-size: small;
+    position: absolute; /* forhindrer at figcaption "stjeler" plass fra bildet" */
 }
 
 /*HEADER*/
@@ -55,25 +56,6 @@ header a {
     margin-top: 1%;
 }
 
-@media screen and (max-width: 800px) {
-    header {
-        height: 100px;   
-        
-    }
-
-    header>nav {
-        white-space: pre;
-        text-align: right;
-        margin-top: 0px;
-    }
-
-    header a {
-        padding-right: 10px;
-    }  
-} 
-
-
-
 /* INNLEDNING (mellom header og hoved-grid) */
 .innledning {
     text-align: center;
@@ -83,8 +65,11 @@ header a {
     display: block;
     margin-left: auto;
     margin-right: auto; /* midtstiller bildet */
-    max-width: 70%; /* Burde være større på mindre skjermer */
+    max-width: 70vw; /* Burde være større på mindre skjermer */
+    position: relative;
 }
+
+
 
 .ingress {
     margin-left: 25%;
@@ -180,29 +165,6 @@ details > summary::-webkit-details-marker {
     grid-template-columns: repeat(auto-fit, minmax(600px, 1fr)) /* Juster minimum px */
 } 
 
-
- @media screen and (max-width: 800px) { 
-    .main-grid, .second-grid {
-        grid-template-columns: 1fr;
-        /*grid-template-rows: 1fr;*/
-    }
-
-    .hva-kan-du-jobbe-som {order: 0;}
-    .lilla-student-bilde {order: 1;}
-    .hva-kan-du-jobbe-som {order: 2;}
-    .robot-bilde {order: 3;}
-    .hvordan-foregår-undervisningen {order: 4;}
-    .gruppearbeid-bilde {order: 5;}
-    .videre-studiemuligheter {order: 6;}
-    .undervisning-bilde {order: 7;}
-    .opptakskrav-og-poeng {order: 8;}
-    .digital-bilde {order: 9;}
-    .hva-koster-det {order: 10;}
-    .slik-søker-du {order: 11;}
-    /*Sørger for plassering i riktig rekkefølge*/
-} 
-
-
 .main-grid > * , .second-grid > *{
     margin:1vw;
 }  /* gir mellomrom mellom boksene */
@@ -224,9 +186,12 @@ details > summary::-webkit-details-marker {
 }
 
 /* Bilder */
+
 .lilla-student-bilde>img, .robot-bilde>img, .gruppearbeid-bilde>img, .undervisning-bilde>img, .digital-bilde>img  {
     object-fit: cover; /* cover sørger for at containeren alltid fylles opp av bildet */
     max-width: 100%;
+    width: 100%;
+    height: auto;
 } 
 
 picture>img {
@@ -270,6 +235,10 @@ picture>img {
 
 /* (second grid) */
 
+.second-grid {
+    margin-left: 4vw;
+}
+
 .kristoffer-bilde {
     width: 30%;
     float: left;
@@ -288,6 +257,10 @@ picture>img {
     text-align: left;
 }
 
+.studiested-og-spørsmål h2, .studiested-og-spørsmål p {
+    padding-left: 0;
+}
+
 
 /* UTLEDNING (lol) */
 
@@ -299,7 +272,7 @@ margin-left: 5%
 }
 
 .andre-studier {
-    margin: 2%;
+    margin: 5vw;
 }
 
 
@@ -410,6 +383,41 @@ footer {
 
 /* FOR MOBILTELEFON */
 @media screen and (max-width: 800px) { 
+
+    header {
+        height: 100px;   
+        
+    }
+
+    header>nav {
+        white-space: pre;
+        text-align: right;
+        margin-top: 0px;
+    }
+
+    header a {
+        padding-right: 10px;
+    }  
+    
+    .main-grid, .second-grid {
+        grid-template-columns: 1fr;
+        /*grid-template-rows: 1fr;*/ 
+    }
+
+    .hva-kan-du-jobbe-som {order: 0;}
+    .lilla-student-bilde {order: 1;}
+    .hva-kan-du-jobbe-som {order: 2;}
+    .robot-bilde {order: 3;}
+    .hvordan-foregår-undervisningen {order: 4;}
+    .gruppearbeid-bilde {order: 5;}
+    .videre-studiemuligheter {order: 6;}
+    .undervisning-bilde {order: 7;}
+    .opptakskrav-og-poeng {order: 8;}
+    .digital-bilde {order: 9;}
+    .hva-koster-det {order: 10;}
+    .slik-søker-du {order: 11;}
+    /*Sørger for plassering i riktig rekkefølge*/
+    
     
     .footer-wrapper {
         grid-template-columns: 1fr;
@@ -429,7 +437,8 @@ footer {
     } 
 }
 
-/* DESKTOP */
+
+/* ULTRA WIDE 21:9 SKJERM*/
 @media screen and (min-width: 2000px) { 
     header {
         height: 125px;
@@ -449,6 +458,18 @@ footer {
 
     p, ul {
         font-size: 1vw;
+    }
+
+    .matmod-hovedbilde>img {
+        width: 90vw;
+    }
+
+    .bachelorprogram {
+        font-size: 1.4vw;
+    }
+
+    .ingress {
+        font-size: 1.3vw;
     }
 
     .oversikt-tabell {
@@ -484,6 +505,11 @@ footer {
 
     .andre-studier button {
         font-size: large;
+    } 
+
+    .anvendt-master-h4 {
+        font-size: 1vw;
+        padding-left: 0.5vw;
     }
 
     .studiested-og-spørsmål h2, .studiested-og-spørsmål p {
@@ -494,6 +520,10 @@ footer {
         margin-left: 0;
     }
 
+    .studiested-og-spørsmål>button>h4 {
+        font-size: 2vw;
+    }
+
     .studiets-oppbygging {
         margin-left: 7.5%;
         margin-right: 7.5%;
@@ -501,6 +531,18 @@ footer {
 
     .oppbygging-tabell {
         width: 100%;
+    }
+
+    .faglig-leder-button h3 {
+        font-size: 1vw;
+    }
+
+    .spa-fremtiden-aside h2 {
+        font-size: 1.5vw;
+    }
+
+    .spa-fremtiden-aside h5, .spa-fremtiden-aside p {
+        font-size: 1vw;
     }
 
 }

@@ -79,17 +79,21 @@
             </article>
 
             <figure class="lilla-student-bilde"> <!--Bilde til "Hva lærer du?"-->
-                <img src="bilder/lilla-student.jpeg" alt="ingeniørstudent som holder bærbar pc">
-            <figcaption>Adobe Stock</figcaption>
+                <picture>
+                <source media="(min-width: 2000px)" srcset="bilder/lilla-student-large.webp">
+                   <!-- <source media="(min-width: 768px)" srcset="bilder/robot-medium.jpeg">
+                    <source media="(max-width: 767px)" srcset="bilder/robot-small.jpeg"> -->
+                    <img src="bilder/lilla-student.jpeg" alt="ingeniørstudent som holder bærbar pc">
+                </picture>
+                <figcaption>Adobe Stock</figcaption>  
             </figure>
 
             <figure class="robot-bilde">
                 <picture>
-                    <source media="(min-width: 1024px)" srcset="bilder/robot-large.jpeg">
+                    <source media="(min-width: 2000px)" srcset="bilder/robot-large.webp">
                    <!-- <source media="(min-width: 768px)" srcset="bilder/robot-medium.jpeg">
                     <source media="(max-width: 767px)" srcset="bilder/robot-small.jpeg"> -->
-                <img src="bilder/robot.jpeg" alt="Bilde av kvinne og robot"> <!--Dersom nettleseren ikke støtter <picture> taggen, 
-                    eller dimensjonene over ikke er gjeldende, vil <img> gjelde.-->
+                    <img src="bilder/robot.jpeg" alt="Bilde av kvinne og robot"> 
                 </picture>
                 <figcaption>Adobe Stock</figcaption>
             </figure>
@@ -120,12 +124,22 @@
             </article>
 
             <figure class="gruppearbeid-bilde"> <!--Bilde til "Hvordan foregår undervisningen?"-->
-                <img src="bilder/gruppearbeid.jpeg" alt="4 studenter samarbeider og ler sammen">
+                <picture>
+                    <source media="(min-width: 2000px)" srcset="bilder/gruppearbeid-large.webp">
+                <!-- <source media="(min-width: 768px)" srcset="bilder/robot-medium.jpeg">
+                    <source media="(max-width: 767px)" srcset="bilder/robot-small.jpeg"> -->
+                    <img src="bilder/gruppearbeid.jpeg" alt="4 studenter samarbeider og ler sammen">
+                </picture>
                 <figcaption>Adobe Stock</figcaption>
             </figure>
 
             <figure class="undervisning-bilde">
-                <img src="bilder/undervisning.jpeg" alt="lærer foreleser i koding">
+                <picture>
+                    <source media="(min-width: 2000px)" srcset="bilder/undervisning-large.webp">
+                   <!-- <source media="(min-width: 768px)" srcset="bilder/robot-medium.jpeg">
+                    <source media="(max-width: 767px)" srcset="bilder/robot-small.jpeg"> -->
+                    <img src="bilder/undervisning.jpeg" alt="lærer foreleser i koding">
+                </picture> 
                 <figcaption>Adobe Stock</figcaption>
             </figure>
 
@@ -133,7 +147,7 @@
                 <h2>Videre studiemuligheter ved OsloMet</h2>
                 <a href="https://www.oslomet.no/studier/tkd/anvendt-data-informasjonsteknologi">
                     <button class="andre-studier-button">
-                        <h4>Anvendt data- og informasjonsteknologi (ACIT)</h4> 
+                        <h4 class="anvendt-master-h4">Anvendt data- og informasjonsteknologi (ACIT)</h4> 
                         <p>Masterprogram | 2 år | Pilestredet i Oslo | Heltid</p>
                     </button>
                 </a>
@@ -154,6 +168,10 @@
             </article>
 
             <figure class="digital-bilde">
+                <picture>
+                    <source media="(min-width: 2000px)" srcset="bilder/digital-large.webp">
+                   <!-- <source media="(min-width: 768px)" srcset="bilder/robot-medium.jpeg">
+                    <source media="(max-width: 767px)" srcset="bilder/robot-small.jpeg"> -->
                 <img src="bilder/digital.jpeg" alt="mann jobber med modellering på skjerm">
                 <figcaption>Adobe Stock</figcaption>
             </figure>
