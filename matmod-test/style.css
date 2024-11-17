@@ -647,7 +647,7 @@ men rekkefølgen på boksene må endres da de vil vises i 1 kolonne, som på mob
     /* Bakgrunnsbilde for hele siden*/
 
     body.aktivitetsside {
-        background-image: url('bilder/fjellandskap.jpg');
+        background-image: url('bilder/activity/fjellandskap.jpg'); /*Bildet er hentet fra pexels*/
         background-repeat: no-repeat;
         background-size: cover;
         background-position: center; 
