@@ -701,7 +701,7 @@ men rekkefølgen på boksene må endres da de vil vises i 1 kolonne, som på mob
         border-radius: 8px;
         overflow: hidden;
         box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
-        flex: 0 0 calc(50% - 20px); /* Denne linjen fant vi på stack overflow. Gjør at boksene tar opp 50% av bredden minus litt plass til margin */
+        flex: 0 0 calc(50% - 30px); /* Denne linjen fant vi på stack overflow. Gjør at boksene tar opp 50% av bredden minus litt plass til margin */
         margin: 10px;
     }
     
