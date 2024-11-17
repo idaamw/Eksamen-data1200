@@ -52,7 +52,7 @@ header>nav {
 
 header a {
     padding-right: 15vw;
-}
+} 
 
 .oslomet-logo {
     width: 5%;
@@ -500,7 +500,7 @@ footer {
 
 
 /* ULTRA WIDE 21:9 SKJERM*/
-@media screen and (min-width: 2000px) { 
+@media screen and (min-width: 1800px) { /*1800 er min-width for tre kolonner i griden*/
     header {
         height: 125px;
     }
@@ -614,6 +614,11 @@ footer {
 
     .storbyuniversitetet-bilde {
         width: 600px;
+    }
+
+    .lilla-student-bilde>img {
+        max-height: 100%;
+        object-fit: contain;
     }
 }
 
