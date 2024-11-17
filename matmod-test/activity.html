@@ -10,20 +10,22 @@
 
 <body class="aktivitetsside">
     <header>
-        <a href="index.html">
-            <picture>
-                <source media="(min-width: 2000px)" srcset="bilder/oslomet-logo-transparent-large.webp">
-                <source media="(max-width: 1799px)" srcset="bilder/oslomet-logo-transparent-medium.webp">
-                <source media="(max-width: 600px)" srcset="bilder/oslomet-logo-transparent-small.webp"> 
-                <img class="oslomet-logo"src="bilder/oslomet-logo-transparent.png" alt="Oslomet-logo">
-            </picture>
-        </a>
+        <picture>
+            <source media="(min-width: 1800px)" srcset="bilder/oslomet-logo-hvit-large.webp">
+            <source media="(max-width: 1799px)" srcset="bilder/oslomet-logo-hvit-medium.webp">
+            <source media="(max-width: 600px)" srcset="bilder/oslomet-logo-hvit-small.webp"> 
+            <a href="index.html">
+            <img class="oslomet-logo"src="bilder/oslomet-logo-hvit.webp" alt="Oslomet-logo. Trykk for å returnere til hovedsiden">
+            </a>
+        </picture>
         <nav> 
             <a href="accessibility.html">Accessibility</a>
             <a href="github.html">Github</a>
             <a href="activity.html">Activity</a>
         </nav>
     </header>
+
+    <main>
 
     <!--Introduksjonsseksjoner "fjelltur og tureventyr"-->
     <section class="innledning">
@@ -72,53 +74,58 @@
     </section>
 
     <!--Seksjon for turutstyr med lenker-->
-    <section class="turutstyr">
-        <h2>Essensielt turutstyr</h2>
-        <p>Å ha riktig utstyr er viktig for en komfortabel og morsom tur. Her er en rask guide til anbefalt utstyr:</p>
-        <ul>
-            <li><a href="https://www.naturkompaniet.no/herre/sko-og-stovler/tur-og-fjellsko/" target="_blank">tursko</a></li>
-            <li><a href="https://www.naturkompaniet.no/utstyr/ryggsekker-og-vesker/" target="_blank">Ryggsekker og Utstyr</a></li>
-            <li><a href="https://www.naturkompaniet.no/herre/klaer/bukser/" target="_blank">Utendørs Klær</a></li>
-        </ul>
-    </section>
+    <article class="informasjonslister">
+        <section class="turutstyr">
+            <h2>Essensielt turutstyr</h2>
+            <p>Å ha riktig utstyr er viktig for en komfortabel og morsom tur. Her er en rask guide til anbefalt utstyr:</p>
+            <ul>
+                <li><a href="https://www.naturkompaniet.no/herre/sko-og-stovler/tur-og-fjellsko/">Tursko</a></li>
+                <li><a href="https://www.naturkompaniet.no/utstyr/ryggsekker-og-vesker/">Ryggsekker og Utstyr</a></li>
+                <li><a href="https://www.naturkompaniet.no/herre/klaer/bukser/">Utendørs Klær</a></li>
+            </ul>
+        </section>
 
-    <!--seksjon for sikkerhetstips-->
-    <section class="sikkerhetstips">
-        <h2>Sikkerhetstips</h2>
-        <p>Sikkerheten på tur er avgjørende, gode forberedelser kan være forskjellen mellom en trygg opplevelse og en risikofylt situasjon</p>
-        <ul>
-            <li>Planlegg turen: Sjekk værmeldingen og ruten før du drar</li>
-            <li>Fortell noen hvor du skal, og når du forventer å være tilbake.</li>
-            <li>Hold deg på merkede stier: Dette reduserer sjansen for å gå seg bort og beskytter naturen.</li>
+        <!--seksjon for sikkerhetstips-->
+        <section class="sikkerhetstips">
+            <h2>Sikkerhetstips</h2>
+            <p>Sikkerheten på tur er avgjørende, gode forberedelser kan være forskjellen mellom en trygg opplevelse og en risikofylt situasjon</p>
+            <ul>
+                <li>Planlegg turen: Sjekk værmeldingen og ruten før du drar</li>
+                <li>Fortell noen hvor du skal, og når du forventer å være tilbake.</li>
+                <li>Hold deg på merkede stier: Dette reduserer sjansen for å gå seg bort og beskytter naturen.</li>
+            </ul>        
+        </section>
 
-        </ul>        
-    </section>
+        <!--seksjon for turruter med lenker-->
+        <section class="turruter">
+            <h2>Populære turruter</h2>
+            <p>Her er noen berømte turstier du kanskje vil utforske:</p>
+            <ul>
+                <li><a href="https://ut.no/sted/146128071/mardalsfossen">Mardalsfossen</a></li>
+                <li><a href="https://ut.no/utforsker/omrade/122579/rondane-nasjonalpark/turforslag?type=fottur">Rondane Nasjonalpark</a></li>
+                <li><a href="https://ut.no/utforsker/stedsnavn/616966/besseggen/turforslag?type=fottur">Besseggen</a></li>
+            </ul>
+        </section>
+    </article>
 
-    <!--seksjon for turruter med lenker-->
-    <section class="turruter">
-        <h2>Populære turruter</h2>
-        <p>Her er noen berømte turstier du kanskje vil utforske:</p>
-        <ul>
-            <li><a href="https://ut.no/sted/146128071/mardalsfossen" target="_blank">Mardalsfossen</a></li>
-            <li><a href="https://ut.no/utforsker/omrade/122579/rondane-nasjonalpark/turforslag?type=fottur" target="_blank">Rondane Nasjonalpark</a></li>
-            <li><a href="https://ut.no/utforsker/stedsnavn/616966/besseggen/turforslag?type=fottur" target="_blank">Besseggen</a></li>
-        </ul>
-    </section>
+   </main>
 
     <!-- Footer -->
         <footer>
-             <div class="sosiale-medier-aktivitetsside">
+             <nav class="footer-innhold">
                 <h2>Følg oss</h2>
                     <ul>
-                        <li><a href="https://www.facebook.com/oslomet/">Facebook</a>
-                        <li><a href="https://x.com/oslomet">Twitter</a>
-                        <li><a href="https://www.instagram.com/oslomet/?hl=nb">Instagram</a>
+                        <li><a href="https://www.facebook.com/oslomet/">Facebook</a></li>
+                        <li><a href="https://x.com/oslomet">Twitter</a></li>
+                        <li><a href="https://www.instagram.com/oslomet/?hl=nb">Instagram</a></li>
                     </ul>
-            </div>
-            <div class="kontakt-informasjon-aktivitetsside">
-                <h2><a href="https://www.oslomet.no/om/kontakt">Kontakt oss</a></h2>
-            </div>
-            </div>
+                    <picture>
+                        <source media="(min-width: 2000px)" srcset="bilder/oslomet-storbyuniversitetet-skrift-hvit-large.webp">
+                         <source media="(max-width: 600px)" srcset="bilder/oslomet-storbyuniversitetet-skrift-hvit-small.webp">
+                        <img class="storbyuniversitetet-bilde" src="bilder/oslomet-storbyuniversitetet-skrift-hvit.webp" alt="Oslo Metropolitan University - Storbyuniversitetet">
+                    </picture>
+                  <!--<h2><a href="https://www.oslomet.no/om/kontakt">Kontakt oss</a></h2>-->
+                </nav>
         </footer>
     </body>
 </html>

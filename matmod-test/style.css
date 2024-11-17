@@ -1,4 +1,5 @@
 body {
+    overflow-x: hidden;
     margin: 0;
     font-family: Moderat, Avenir, Helvetica, Arial; /* må endres */ 
 }
@@ -642,22 +643,48 @@ men rekkefølgen på boksene må endres da de vil vises i 1 kolonne, som på mob
 
 
 
-/*styling for aktivitetsside*/
+/*STYLING FOR ACTIVITY PAGE*/
     /* Bakgrunnsbilde for hele siden*/
+
     body.aktivitetsside {
-        background-image: url('bilder/molde.jpg');
+        background-image: url('bilder/fjellandskap.jpg');
         background-repeat: no-repeat;
         background-size: cover;
-        background-position: center;
-    }
-    .aktivitetsside .innledning{
-        padding: 1rem;
-    }
-    .aktivitetsside .innledning p{
-        font-size: large;
+        background-position: center; 
+        min-width: 100vw;
     }
 
+    .aktivitetsside header {
+        background-color: rgb(30,30,30);
+    }
+
+    .aktivitetsside a {
+        color: white;
+    }
+
+    .aktivitetsside .innledning p{
+        font-size: large;
+        color: white;
+        margin-left: 20vw;
+        margin-right: 20vw;
+    }
+
+    .aktivitetsside h1 {
+        color: white;
+    }
+
+    .aktivitetsside h2 {
+        color: white;
+    }
+
+
       /* stil for aktivitetene, posisjon og tekst*/
+
+    .aktivitetsside .main-grid {
+        display: flex;
+        flex-wrap: wrap; 
+    } 
+
     .aktivitetsside .aktiviteter {
         position: relative;
         background-size: cover;
@@ -671,6 +698,8 @@ men rekkefølgen på boksene må endres da de vil vises i 1 kolonne, som på mob
         border-radius: 8px;
         overflow: hidden;
         box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+        flex: 0 0 calc(50% - 20px); /* Denne linjen fant vi på stack overflow. Gjør at boksene tar opp 50% av bredden minus litt plass til margin */
+        margin: 10px;
     }
     
     /* oppsett for innholdet på aktivitetene*/
@@ -698,7 +727,7 @@ men rekkefølgen på boksene må endres da de vil vises i 1 kolonne, som på mob
 
     /* stil og effekt for knappene på aktivitetene*/
     .aktivitetsside .aktivitet-knapp {
-        background-color: #9D8DD6;
+        background-color: rgb(62,127,76);
         color: white;
         padding: 10px 20px;
         border: none;
@@ -708,46 +737,138 @@ men rekkefølgen på boksene må endres da de vil vises i 1 kolonne, som på mob
     }
     
     .aktivitetsside .aktivitet-knapp:hover {
-        background-color: #7C69C2;
+        background-color: rgb(80, 166, 99);
         transform: scale(1.05);
     }
     
+
+    /* informasjon under aktivitetsoppsett */
+    .aktivitetsside .informasjonslister {
+        margin-left: 3vw;
+        margin-right: 3vw;
+        margin-top: 4vw;
+    }
+
     .aktivitetsside .turutstyr, .aktivitetsside .turruter , .aktivitetsside .sikkerhetstips, .aktivitetsside .turutstyr a , .aktivitetsside .turruter a{
         color:white
-
-    }
-    .aktivitetsside .turutstyr a , .aktivitetsside .turruter a {
-        font-size: 16px;
-        font-weight: normal;
     }
 
-    .aktivitetsside .sosiale-medier-aktivitetsside h2{
-       align-content: left;
-
+    .aktivitetsside .turutstyr, .aktivitetsside .sikkerhetstips {
+        margin-bottom: 7vh;
     }
+    
+     /*ACTIVITY FOOTER*/
+     .aktivitetsside footer {
+        background-color: rgb(30,30,30);
+        position: absolute; /* forhindrer mellomrom under footer */
+        width: 100%;
+        margin-top: 0;
+     }
 
-    .aktivitetsside .sosiale-medier-aktivitetsside ul {
+     .aktivitetsside .footer-innhold {
+        margin-left: 2vw;
+     }
+ 
+     .aktivitetsside .footer-innhold ul {
         list-style: none;
         display: flex;
         justify-content: left;
-    }
-    
-     /*stil for sosiale medier lenker*/
-    .aktivitetsside .sosiale-medier-sktivitetsside ul li a{
-        color: white;
-        margin: 20px;
+        padding-inline-start: 0;
+
+     }
+
+    .aktivitetsside .footer-innhold ul li a{
+        color:white ;
+        background-color: rgb(62,127,76);
         font-size: 1.2em;
+        margin-right: 4vw;
         text-decoration: none;
-        opacity: 0.7;
-        transition: 0.5s;
+        padding: 10px;
+        border-radius: 8px;
+    } 
+
+    .aktivitetsside .footer-innhold ul li a:hover{
+        opacity: 50;
     }
 
-    .aktivitetsside .sosiale-medier-aktivitetsside ul li a:hover{
-        opacity: 1;
+    .aktivitetsside .storbyuniversitetet-bilde {
+        margin-left: 0;
+        margin-bottom: 3vh;
     }
 
     /* stil for teksten i aktivitetsoppsett*/ 
     .aktivitetsside .aktivitetsoppsett p{
         opacity: 0.8;
     }
+
+/* ACTIVITY FOR MOBILSKJERM */
+      @media screen and (max-width: 600px) { 
+        .aktivitetsside .innledning p{
+            margin-left: 2vw;
+            margin-right: 2vw;
+        }
+
+        .aktivitetsside .informasjonslister {
+            margin-top: 5.5vh;
+            margin-bottom: 6vh;
+        }
+
+        .aktivitetsside .aktiviteter {
+            flex: 0 0 calc(100% - 20px); 
+        }
+    }
+
+/* ACTIVITY FOR ULTRA WIDE SKJERM*/
+    @media screen and (min-width: 1800px) { 
+        .aktivitetsside p, .aktivitetsside .innledning p, .aktivitetsside .main-grid p, 
+        .aktivitetsside .main-grid a, .informasjonslister li {
+            font-size: 1.5vw;
+        }
+
+        .aktivitetsside .main-grid h2, .informasjonslister h2 {
+            font-size: 1.8vw;
+        }
+
+        .aktivitetsside .turutstyr, .aktivitetsside .sikkerhetstips {
+            margin-bottom: 4vh;
+        }
+
+        .aktivitetsside .aktiviteter {
+            height: 500px;
+        }
+    }
+
+
+
+
+
+
+
+
+    /*Koden under hentet fra stack overflow for å løse responsive design*/
     
+   
+    
+   
+
+    /* Av en eller annen grunn hopper linkene i headeren ned under headeren på enkelte skjermbredder. Dette skjer kun på activity-siden.
+    Koden under er et plaster på såret, da vi ikke har klart å finne årsaken */
+
+    @media (min-width: 1800px) and (max-width: 2058px) {
+        .aktivitetsside header {
+            flex-direction: row; 
+        }
+        .aktivitetsside header>nav {
+            margin-top: -20px
+        }
+    }
+
+    @media (min-width: 750px) and (max-width: 1157px) {
+        .aktivitetsside header {
+            flex-direction: row; 
+        }
+        .aktivitetsside header>nav {
+            margin-top: -1vw;
+        }
+    }
+
