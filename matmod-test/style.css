@@ -351,7 +351,7 @@ figcaption {
     .spa-fremtiden-aside h2 {
         padding-left: 4%;
         padding-top: 3%;
-        padding-right: 50%;
+        padding-right: 54%;
     }
 
     .spa-fremtiden-aside h5 {
@@ -383,6 +383,16 @@ figcaption {
         padding: 1%;
         font-weight: 600;
         border: none;
+    }
+
+    @media screen and (max-width: 800px){    /*Breaking point*/
+        .spa-fremtiden-aside h2, .spa-fremtiden-aside h5, .spa-fremtiden-aside p {
+            padding-right: 4%;
+        }
+    
+        .smilefjes-bilde {
+            display: none;
+        }
     }
 
 
@@ -518,14 +528,6 @@ figcaption {
         padding: 5px;
         /* Sørger for padding også på høyre siden på veldig små skjermer, som iPhone SE */
     } 
-
-    .spa-fremtiden-aside h2, .spa-fremtiden-aside h5, .spa-fremtiden-aside p {
-        padding-right: 4%;
-    }
-
-    .smilefjes-bilde {
-        display: none;
-    }
 
     .footer-informasjon ul, .sosiale-medier ul {
         margin-top: 0;
@@ -872,7 +874,7 @@ men rekkefølgen på boksene må endres da de vil vises i 1 kolonne, som på mob
     }
 
 
-    
+
 /* ACTIVITY FOR ULTRA WIDE SKJERM*/
     @media screen and (min-width: 1800px) { 
         .aktivitetsside p, .aktivitetsside .innledning p, .aktivitetsside .main-grid p, 
