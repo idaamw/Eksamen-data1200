@@ -712,6 +712,14 @@ men rekkefølgen på boksene må endres da de vil vises i 1 kolonne, som på mob
         background-color: rgb(30,30,30);
     }
 
+    .aktivitetsside h1 {
+        color: white;
+    }
+
+    .aktivitetsside h2 {
+        color: white;
+    }
+
     .aktivitetsside a {
         color: white;
     }
@@ -723,16 +731,8 @@ men rekkefølgen på boksene må endres da de vil vises i 1 kolonne, som på mob
         margin-right: 20vw;
     }
 
-    .aktivitetsside h1 {
-        color: white;
-    }
 
-    .aktivitetsside h2 {
-        color: white;
-    }
-
-
-    /* stil for aktivitetene, posisjon og tekst*/
+    /* stil for aktivitetsbokser, posisjon og tekst*/
     .aktivitetsside .main-grid {
         display: flex;
         flex-wrap: wrap; 
@@ -778,6 +778,10 @@ men rekkefølgen på boksene må endres da de vil vises i 1 kolonne, som på mob
         margin: 10px 0;
     }
 
+    .aktivitetsside .aktivitetsoppsett p{
+        opacity: 0.8;
+    }
+
     /* stil og effekt for knappene på aktivitetene*/
     .aktivitetsside .aktivitet-knapp {
         background-color: rgb(80, 166, 99);
@@ -809,13 +813,17 @@ men rekkefølgen på boksene må endres da de vil vises i 1 kolonne, som på mob
     .aktivitetsside .turutstyr, .aktivitetsside .sikkerhetstips, .aktivitetsside .turruter {
         margin-bottom: 7vh;
     }
+
     
-     /*ACTIVITY FOOTER*/
+    
+    /*ACTIVITY FOOTER*/
+
      .aktivitetsside footer {
         background-color: rgb(30,30,30);
         position: absolute; /* forhindrer mellomrom under footer */
         width: 100%;
         margin-top: 0;
+        color: white;
      }
 
      .aktivitetsside .footer-innhold {
@@ -827,11 +835,9 @@ men rekkefølgen på boksene må endres da de vil vises i 1 kolonne, som på mob
         display: flex;
         justify-content: left;
         padding-inline-start: 0;
-
      }
 
     .aktivitetsside .footer-innhold ul li a{
-        color:white ;
         background-color: rgb(80, 166, 99);
         font-size: 1.2em;
         margin-right: 4vw;
@@ -847,11 +853,6 @@ men rekkefølgen på boksene må endres da de vil vises i 1 kolonne, som på mob
     .aktivitetsside .storbyuniversitetet-bilde {
         margin-left: 0;
         margin-bottom: 3vh;
-    }
-
-    /* stil for teksten i aktivitetsoppsett*/ 
-    .aktivitetsside .aktivitetsoppsett p{
-        opacity: 0.8;
     }
 
 
@@ -895,21 +896,10 @@ men rekkefølgen på boksene må endres da de vil vises i 1 kolonne, som på mob
         }
     }
 
-
-
-
-
-
-
-
-    /*Koden under hentet fra stack overflow for å løse responsive design*/
-    
-   
-    
    
 
     /* Av en eller annen grunn hopper linkene i headeren ned under headeren på enkelte skjermbredder. Dette skjer kun på activity-siden.
-    Koden under er et plaster på såret, da vi ikke har klart å finne årsaken */
+    Koden under er et plaster på såret, da vi ikke har klart å finne årsaken. Løsningen har vi funnet på stack overflow */
 
     @media (min-width: 1800px) and (max-width: 2058px) {
         .aktivitetsside header {
