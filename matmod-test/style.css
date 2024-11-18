@@ -40,362 +40,402 @@ figcaption {
     position: absolute; /* forhindrer at figcaption "stjeler" plass fra bildet" */
 }
 
+
 /*HEADER*/
-header {
-    background-color: rgb(157, 141, 214);
-    height: 80px;
-    margin: 0px;
-    padding: 0px;
-}
 
-header>nav {
-    text-align: center;
-    float: right;
-    font-size: large;
-    margin-top: 2vw;
-}
+    header {
+        background-color: rgb(157, 141, 214);
+        height: 80px;
+        margin: 0px;
+        padding: 0px;
+    }
 
-header a {
-    padding-right: 15vw;
-} 
+    header>nav {
+        text-align: center;
+        float: right;
+        font-size: large;
+        margin-top: 2vw;
+    }
 
-.oslomet-logo {
-    width: 5%;
-    margin-left: 14%;
-    margin-top: 1%;
-}
+    header a {
+        padding-right: 15vw;
+    } 
+
+    .oslomet-logo {
+        width: 5%;
+        margin-left: 14%;
+        margin-top: 1%;
+    }
+
 
 /* INNLEDNING (mellom header og hoved-grid) */
-.innledning {
-    text-align: center;
-} 
 
-.matmod-hovedbilde figcaption {
-    position: relative;}
+    .innledning {
+        text-align: center;
+    } 
 
-.matmod-hovedbilde {
-    margin-left: auto;
-    margin-right: auto; /* midtstiller bildet */
-    max-width: 70vw;
-}
+    .matmod-hovedbilde figcaption {
+        position: relative;}
 
+    .matmod-hovedbilde {
+        margin-left: auto;
+        margin-right: auto; /* midtstiller bildet */
+        max-width: 70vw;
+    }
 
+    .ingress {
+        margin-left: 25%;
+        margin-right: 25%;
+        margin-top: 35px;
+        margin-bottom: 35px;
+        font-size: large;
+    }
 
-.ingress {
-    margin-left: 25%;
-    margin-right: 25%;
-    margin-top: 35px;
-    margin-bottom: 35px;
-    font-size: large;
-}
+    .oversikt-tabell{
+        margin-left: auto;
+        margin-right: auto; /* Plasserer tabellen midt på siden (horisontalt)*/
+        overflow-x: auto; /* Enable horizontal scrolling */ 
+        -webkit-overflow-scrolling: touch; /* For smooth scrolling on mobile */ 
+    }
 
-.oversikt-tabell{
-    margin-left: auto;
-    margin-right: auto; /* Plasserer tabellen midt på siden (horisontalt)*/
-    overflow-x: auto; /* Enable horizontal scrolling */ 
-    -webkit-overflow-scrolling: touch; /* For smooth scrolling on mobile */ 
-}
+    .oversikt-tabell, .oversikt-tabell th, .oversikt-tabell td { /*MÅ FIKSES MTP PÅ SKALERING*/
+        border-spacing: 20px;
+        color: black;
+        text-align: left;
+    }
 
-.oversikt-tabell, .oversikt-tabell th, .oversikt-tabell td { /*MÅ FIKSES MTP PÅ SKALERING*/
-    border-spacing: 20px;
-    color: black;
-    text-align: left;
-}
+    td {
+        vertical-align: top;
+    }
 
-td {
-    vertical-align: top;
-}
-
-.bachelorprogram {
-    font-size: large;
-    font-weight: 600;
-}
+    .bachelorprogram {
+        font-size: large;
+        font-weight: 600;
+    }
 
 
 /* DETAILS*/
-.studiets-oppbygging {
-    background-color: rgb(218, 228, 236);
-    margin: 2%;
-}
 
-details > summary {
-    list-style: none;
-  }
-details > summary::-webkit-details-marker {
-    display: none; /*tar bort pilen over details*/
-  }
-
-
-.oppbygging-tabell {
-    border: solid;
-    border-width: 1px;
-    border-collapse: collapse;
-    border-color: black;
-    padding-top: 1%;
-    padding-bottom: 1%;
-    text-align: center;
-    vertical-align: top;
-}
-
-.oppbygging-tabell tr {
-    border: solid;
-}
-
-.oppbygging-tabell th, .oppbygging-tabell td {
-    border: dashed 1px;
-    vertical-align: middle;
-}
-
-.oppbygging-tabell tbody tr:nth-child(odd) {
-    background-color: rgb(218, 228, 236);
-}
-
-.oppbygging-tabell tbody tr:nth-child(even) {
-    background-color: rgb(195, 227, 255);
-}
-
-.obligatoriskfag {
-    text-decoration: solid underline black; /*obligatoriske fag blir markert med understrek*/
-}
+    details > summary {
+        list-style: none;
+    }
+    details > summary::-webkit-details-marker {
+        display: none; /*tar bort pilen over details*/
+    }
 
 
 /* MAIN-GRID OG SECOND-GRID*/
 
-.main-grid, .second-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(600px, 1fr)) /* Juster minimum px */
-} 
+    .main-grid, .second-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(600px, 1fr)); /* Juster minimum px */
+    } 
 
-.main-grid > * , .second-grid > *{
-    margin:1vw;
-}  /* gir mellomrom mellom boksene */
+    .main-grid > * , .second-grid > *{
+        margin:1vw;
+    }  /* gir mellomrom mellom boksene */
 
-.main-grid h2 {
-    text-align: center;
-}
+    .main-grid h2 {
+        text-align: center;
+    }
 
-.main-grid p {
-    padding: 2%;
-}
+    .main-grid p {
+        padding: 2%;
+    }
 
-.main-grid details, .main-grid button {
-    margin-left: 2%;
-} 
+    .main-grid details, .main-grid button {
+        margin-left: 2%;
+    } 
 
-.second-grid p, .second-grid h2, .second-grid button {
-    padding-left: 2%;
-}
+    .second-grid {
+        margin-left: 4vw;
+    }
 
-/* Bilder i hoved-grid */
+    .second-grid p, .second-grid h2, .second-grid button {
+        padding-left: 2%;
+    }
 
-.lilla-student-bilde>img, .robot-bilde>img, .gruppearbeid-bilde>img, .undervisning-bilde>img, .digital-bilde>img  {
+    .hva-lærer-du { 
+        background-color: rgb(218, 228, 236);
+    }
+    
+    
+    .hva-kan-du-jobbe-som {
+        background-color: rgb(34, 34, 34);
+        color: white; 
+    }
+    
+    .hvordan-foregår-undervisningen {
+        background-color: rgb(103, 134, 144);
+        color: white;
+    }
+    
+    .videre-studiemuligheter, .videre-studiemuligheter button {
+        background-color: rgb(157, 141, 214);
+    }
+    
+    .hva-koster-det {
+        background-color:  rgb(218, 228, 236);
+    }
+    
+    .opptakskrav-og-poeng, .opptakskrav-og-poeng a {
+        background-color: rgb(34, 34, 34);
+        color: white;
+    }
+    
+    .slik-søker-du, .slik-søker-du a {
+        background-color: rgb(103, 134, 144);
+        color: white;
+    }
+    
+    .kristoffer-bilde {
+        width: 30%;
+        float: left;
+        padding-right: 3%;
+    }
+    
+    .faglig-leder-button {
+        background-color: white;
+        border: none;
+        padding-top: 1%;
+        padding-bottom: 1%;
+        text-align: left;
+    }
+    
+    .studiested-og-spørsmål h2, .studiested-og-spørsmål p {
+        padding-left: 0;
+    }
+    
+    .studiested-og-spørsmål a {
+        text-decoration: underline;
+    } 
+
+
+/* BILDER I HOVED-GRID */
+
+    .lilla-student-bilde>img, .robot-bilde>img, .gruppearbeid-bilde>img, .undervisning-bilde>img, .digital-bilde>img  {
+        object-fit: cover; /* cover sørger for at containeren alltid fylles opp av bildet */
+        max-width: 100%; 
+        
+        height: 100%; 
+    } 
+
+    .main-grid picture>img {
     object-fit: cover; /* cover sørger for at containeren alltid fylles opp av bildet */
-    max-width: 100%;
+    max-width: 100%; 
     width: 100%;
-    height: auto;
-} 
-
-picture>img {
-    object-fit: cover; /* cover sørger for at containeren alltid fylles opp av bildet */
-    max-width: 100%;
-}
-
-.hva-lærer-du { 
-    background-color: rgb(218, 228, 236);
-}
+    height: 100%;
+    }
 
 
-.hva-kan-du-jobbe-som {
-    background-color: rgb(34, 34, 34);
-    color: white; 
-}
+/* STUDIETS OPPBYGGING TABELL */
+    .studiets-oppbygging {
+        background-color: rgb(218, 228, 236);
+        margin: 2%;
+    }
 
-.hvordan-foregår-undervisningen {
-    background-color: rgb(103, 134, 144);
-    color: white;
-}
+    .oppbygging-tabell {
+        border: solid;
+        border-width: 1px;
+        border-collapse: collapse;
+        border-color: black;
+        padding-top: 1%;
+        padding-bottom: 1%;
+        text-align: center;
+        vertical-align: top;
+    }
 
-.videre-studiemuligheter, .videre-studiemuligheter button {
-    background-color: rgb(157, 141, 214);
-}
+    .oppbygging-tabell tr {
+        border: solid;
+    }
 
-.hva-koster-det {
-    background-color:  rgb(218, 228, 236);
-}
+    .oppbygging-tabell th, .oppbygging-tabell td {
+        border: dashed 1px;
+        vertical-align: middle;
+    }
 
-.opptakskrav-og-poeng, .opptakskrav-og-poeng a {
-    background-color: rgb(34, 34, 34);
-    color: white;
-}
+    .oppbygging-tabell tbody tr:nth-child(odd) {
+        background-color: rgb(218, 228, 236);
+    }
 
-.slik-søker-du, .slik-søker-du a {
-    background-color: rgb(103, 134, 144);
-    color: white;
-}
+    .oppbygging-tabell tbody tr:nth-child(even) {
+        background-color: rgb(195, 227, 255);
+    }
 
+    .obligatoriskfag {
+        text-decoration: solid underline black; /*obligatoriske fag blir markert med understrek*/
+    }
 
-/* (second grid) */
+/* Breaking point for tabellen på 800px, følgende kode gjelder på mindre skjermer*/
 
-.second-grid {
-    margin-left: 4vw;
-}
+    @media (max-width: 800px) {
+        
+        .oppbygging-tabell tr {
+            display: block;
+        }
 
-.kristoffer-bilde {
-    width: 30%;
-    float: left;
-    padding-right: 3%;
-}
+        .oppbygging-tabell th {
+            border: none;
+        }
 
-.faglig-leder-button {
-    background-color: white;
-    border: none;
-    /* border-top: solid;
-    border-bottom: solid; 
-    border-width: 1px;
-    border-color: gray; */
-    padding-top: 1%;
-    padding-bottom: 1%;
-    text-align: left;
-}
+        .oppbygging-tabell td {
+            display: inline-block;
+            margin: 3px;
+            padding: 6px;
+            border: none;
+        }
 
-.studiested-og-spørsmål h2, .studiested-og-spørsmål p {
-    padding-left: 0;
-}
-
-
-/* UTLEDNING (lol) */
-
-
-
-
-.studenthistorier-h2 {
-margin-left: 5%
-}
-
-.andre-studier {
-    margin: 5vw;
-}
+        /* Annenhver farge per semester hjelper med forståelse av tabell på mobil */
+        .oppbygging-tabell tbody tr:nth-child(2), .oppbygging-tabell tbody tr:nth-child(2),
+        .oppbygging-tabell tbody tr:nth-child(7), .oppbygging-tabell tbody tr:nth-child(8),
+        .oppbygging-tabell tbody tr:nth-child(9), .oppbygging-tabell tbody tr:nth-child(10),
+        .oppbygging-tabell tbody tr:nth-child(15), .oppbygging-tabell tbody tr:nth-child(16),
+        .oppbygging-tabell tbody tr:nth-child(17), .oppbygging-tabell tbody tr:nth-child(18){
+            background-color: rgb(209, 197, 248);
+        }
+        
+        .oppbygging-tabell tbody tr:nth-child(1), .oppbygging-tabell tbody tr:nth-child(3),
+        .oppbygging-tabell tbody tr:nth-child(4), .oppbygging-tabell tbody tr:nth-child(5),
+        .oppbygging-tabell tbody tr:nth-child(6), .oppbygging-tabell tbody tr:nth-child(11),
+        .oppbygging-tabell tbody tr:nth-child(12), .oppbygging-tabell tbody tr:nth-child(13),
+        .oppbygging-tabell tbody tr:nth-child(14) {
+            background-color: rgb(218, 228, 236);
+        }
+    }
 
 
-.andre-studier-button {
-    background-color: rgb(218, 228, 236);
-    border: none;
-    text-align: left;
-    padding: 3%;
-   /* text-decoration: none; */
-    margin-bottom: 5px;
-    margin-left: 2px;
-}
 
-.andre-studier-link {
-    text-decoration: none;
-}
+
+/* ANDRE FAG OG STUDENTHISTORIER */
+
+    .studenthistorier-h2 {
+    margin-left: 5%
+    }
+
+    .andre-studier {
+        margin: 5vw;
+    }
+
+    .andre-studier-button {
+        background-color: rgb(218, 228, 236);
+        border: none;
+        text-align: left;
+        padding: 3%;
+        text-decoration: none;
+        margin-bottom: 5px;
+        margin-left: 2px;
+    }
+
+    .andre-studier-link {
+        text-decoration: none;
+    }
 
 
 
 /*ASIDE*/
-.spa-fremtiden-aside{
-    margin-left: 5%;
-    margin-right: 5%;
-}
-.spa-fremtiden-aside, .spa-fremtiden-aside a { 
-    background-color: rgb(103, 134, 144);
-    color: white;
-    text-decoration: none;
-    overflow: hidden;  /* setter aside boks til samme høyde som bildet */
-}
+    .spa-fremtiden-aside{
+        margin-left: 5%;
+        margin-right: 5%;
+    }
+    .spa-fremtiden-aside, .spa-fremtiden-aside a { 
+        background-color: rgb(103, 134, 144);
+        color: white;
+        text-decoration: none;
+        overflow: hidden;  /* setter aside boks til samme høyde som bildet */
+    }
 
-.spa-fremtiden-overskrift {
-    font-size: x-large;
-    padding-left: 4%;
-}
-.spa-fremtiden-aside h2 {
-    padding-left: 4%;
-    padding-top: 3%;
-    padding-right: 50%;
-}
+    .spa-fremtiden-overskrift {
+        font-size: x-large;
+        padding-left: 4%;
+    }
+    .spa-fremtiden-aside h2 {
+        padding-left: 4%;
+        padding-top: 3%;
+        padding-right: 50%;
+    }
 
-.spa-fremtiden-aside h5 {
-    padding-left: 4%;
-    padding-top: 2%;
-    font-size: medium;
-    padding-right: 50%;
-}
+    .spa-fremtiden-aside h5 {
+        padding-left: 4%;
+        padding-top: 2%;
+        font-size: medium;
+        padding-right: 50%;
+    }
 
-.spa-fremtiden-aside p {
-    padding-left: 4%;
-    font-size: medium;
-    padding-right: 50%; /*sørger for at teksten ikke strekker seg forbi bildekanten */
-}
+    .spa-fremtiden-aside p {
+        padding-left: 4%;
+        font-size: medium;
+        padding-right: 50%; /*sørger for at teksten ikke strekker seg forbi bildekanten */
+    }
 
 
-.smilefjes-bilde {
-    max-width: 50%;
-    height: auto;
-    float: right;
-}
+    .smilefjes-bilde {
+        max-width: 50%;
+        height: auto;
+        float: right;
+    }
 
-.flere-studenthistorier-button { /*under aside*/
-    background-color: rgb(34, 34, 34);
-    color: white;
-    font-size: large;
-    margin-left: 5%;
-    margin-top: 2%;
-    padding: 1%;
-    font-weight: 600;
-    border: none;
-}
+    .flere-studenthistorier-button { /*under aside*/
+        background-color: rgb(34, 34, 34);
+        color: white;
+        font-size: large;
+        margin-left: 5%;
+        margin-top: 2%;
+        padding: 1%;
+        font-weight: 600;
+        border: none;
+    }
 
 
 /* FOOTER */
-footer {
-    background-color: rgb(157, 141, 214);
-    margin-top: 5%;
-    padding-top: 1%;
-}
+    footer {
+        background-color: rgb(157, 141, 214);
+        margin-top: 5%;
+        padding-top: 1%;
+    }
 
-.footer-wrapper {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(6px, 1fr));
-    overflow: hidden;
-}
+    .footer-wrapper {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(6px, 1fr));
+        overflow: hidden;
+    }
 
-.footer-wrapper > * {
-    margin:1vw;
-}  /* gir mellomrom mellom boksene */
+    .footer-wrapper > * {
+        margin:1vw;
+    }  /* gir mellomrom mellom boksene */
 
-.hold-deg-oppdatert {
-    padding-left: 3.5vw;
-}
+    .hold-deg-oppdatert {
+        padding-left: 3.5vw;
+    }
 
-.nyhetsbrev-button {
-    background-color: rgb(34, 34, 34);
-    color: white;
-    font-size: large;
-    font-weight: 600;
-    padding: 1%;
-    border: none;
-}
+    .nyhetsbrev-button {
+        background-color: rgb(34, 34, 34);
+        color: white;
+        font-size: large;
+        font-weight: 600;
+        padding: 1%;
+        border: none;
+    }
 
-.storbyuniversitetet-bilde {
-    width: 400px;
-    margin-top: 2%;
-    margin-left: 40px; /* for å matche listene i footer sin padding */
-}
+    .storbyuniversitetet-bilde {
+        width: 400px;
+        margin-top: 2%;
+        margin-left: 40px; /* for å matche listene i footer sin padding */
+    }
 
-.kontakt-informasjon ul, .footer-informasjon ul, .sosiale-medier ul {
-    list-style-type: none;
-}
+    .kontakt-informasjon ul, .footer-informasjon ul, .sosiale-medier ul {
+        list-style-type: none;
+    }
 
-.kontakt-informasjon li, .footer-informasjon li, .sosiale-medier li {
-    padding-bottom: 1.5%;
-}
+    .kontakt-informasjon li, .footer-informasjon li, .sosiale-medier li {
+        padding-bottom: 1.5%;
+    }
 
-.sosiale-medier li {
-    padding-bottom: 2%;
-}
+    .sosiale-medier li {
+        padding-bottom: 2%;
+    }
 
-/* FOR MOBILTELEFON */
+
+/* HOVEDSIDE FOR MOBILTELEFON */
 @media screen and (max-width: 600px) { 
 
     header {
@@ -464,7 +504,7 @@ footer {
 
     .footer-wrapper {
         grid-template-columns: 1fr;
-        grid-template-rows: 1fr; /* ??? */
+       /* grid-template-rows: 1fr; /* nødvendig? */
     }
     .footer-wrapper > * {
         padding-top: 0%;
@@ -627,6 +667,7 @@ footer {
     }
 }
 
+
 /*FOR NETTBRETT */
 @media screen and (max-width: 1024px) { /* bredden til iPad Pro */
     .lilla-student-bilde {order: 0;}
@@ -647,9 +688,16 @@ men rekkefølgen på boksene må endres da de vil vises i 1 kolonne, som på mob
 
 
 
-/*STYLING FOR ACTIVITY PAGE*/
-    /* Bakgrunnsbilde for hele siden*/
 
+
+
+
+
+
+
+/*STYLING FOR ACTIVITY PAGE*/
+
+    /* Bakgrunnsbilde for hele siden*/
     body.aktivitetsside {
         background-image: url('bilder/activity/fjellandskap.jpg'); /*Bildet er hentet fra pexels*/
         background-repeat: no-repeat;
@@ -730,7 +778,7 @@ men rekkefølgen på boksene må endres da de vil vises i 1 kolonne, som på mob
 
     /* stil og effekt for knappene på aktivitetene*/
     .aktivitetsside .aktivitet-knapp {
-        background-color: rgb(62,127,76);
+        background-color: rgb(80, 166, 99);
         color: white;
         padding: 10px 20px;
         border: none;
@@ -740,7 +788,7 @@ men rekkefølgen på boksene må endres da de vil vises i 1 kolonne, som på mob
     }
     
     .aktivitetsside .aktivitet-knapp:hover {
-        background-color: rgb(80, 166, 99);
+        background-color: rgb(96, 196, 118);
         transform: scale(1.05);
     }
     
@@ -782,7 +830,7 @@ men rekkefølgen på boksene må endres da de vil vises i 1 kolonne, som på mob
 
     .aktivitetsside .footer-innhold ul li a{
         color:white ;
-        background-color: rgb(62,127,76);
+        background-color: rgb(80, 166, 99);
         font-size: 1.2em;
         margin-right: 4vw;
         text-decoration: none;
@@ -791,7 +839,7 @@ men rekkefølgen på boksene må endres da de vil vises i 1 kolonne, som på mob
     } 
 
     .aktivitetsside .footer-innhold ul li a:hover{
-        opacity: 50;
+        background-color: rgb(96, 196, 118);
     }
 
     .aktivitetsside .storbyuniversitetet-bilde {
@@ -803,6 +851,8 @@ men rekkefølgen på boksene må endres da de vil vises i 1 kolonne, som på mob
     .aktivitetsside .aktivitetsoppsett p{
         opacity: 0.8;
     }
+
+
 
 /* ACTIVITY FOR MOBILSKJERM */
       @media screen and (max-width: 600px) { 
@@ -821,6 +871,8 @@ men rekkefølgen på boksene må endres da de vil vises i 1 kolonne, som på mob
         }
     }
 
+
+    
 /* ACTIVITY FOR ULTRA WIDE SKJERM*/
     @media screen and (min-width: 1800px) { 
         .aktivitetsside p, .aktivitetsside .innledning p, .aktivitetsside .main-grid p, 
@@ -874,4 +926,5 @@ men rekkefølgen på boksene må endres da de vil vises i 1 kolonne, som på mob
             margin-top: -1vw;
         }
     }
+
 
