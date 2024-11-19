@@ -813,7 +813,27 @@ men rekkefølgen på boksene må endres da de vil vises i 1 kolonne, som på mob
     .aktivitetsside .turutstyr, .aktivitetsside .sikkerhetstips, .aktivitetsside .turruter {
         margin-bottom: 7vh;
     }
-
+    .aktivitetsside .turutstyr li a , .aktivitetsside .turruter li a {
+        text-decoration: none;
+        font-weight: bold;
+        transition: all 0.3 ease;
+    }
+    
+    /* hovereffect til linkene */ 
+    .aktivitetsside .turutstyr li a:hover {
+        color:white;
+        background-color: rgb(148, 151, 209);
+        padding: 2px 6px;
+        border-radius: 4px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    }
+    .aktivitetsside .turruter li a:hover {
+        color:white;
+        background-color: rgb(148, 151, 209);
+        padding: 2px 6px;
+        border-radius: 4px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    }
     
     
     /*ACTIVITY FOOTER*/
