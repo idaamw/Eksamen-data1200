@@ -686,9 +686,12 @@ figcaption {
     .slik-søker-du {order: 11;}
 }
 /*for nettbrett fungerer siden i utgangspunktet greit uten tilpasninger, 
-men rekkefølgen på boksene må endres da de vil vises i 1 kolonne, som på mobiltelefon. /*
+men rekkefølgen på boksene må endres da de vil vises i 1 kolonne, som på mobiltelefon. */
 
-
+/*hovereffekt til linkene i hovedsiden(footer)*/
+.sosiale-medier li a:hover, .footer-informasjon li a:hover, .kontakt-informasjon li a:hover{
+    color: rgb(210, 190, 190);
+}
 
 
 
