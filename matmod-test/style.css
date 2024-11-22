@@ -385,6 +385,11 @@ figcaption {
         border: none;
     }
 
+    .bildekilde-aside {
+        float: right;
+        margin-right: 5vw;
+    }
+
     @media screen and (max-width: 800px){    /*Breaking point*/
         .spa-fremtiden-aside h2, .spa-fremtiden-aside h5, .spa-fremtiden-aside p {
             padding-right: 4%;
