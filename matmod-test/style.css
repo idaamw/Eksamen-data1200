@@ -762,6 +762,11 @@ men rekkefølgen på boksene må endres da de vil vises i 1 kolonne, som på mob
         flex: 0 0 calc(50% - 30px); /* Denne linjen fant vi på stack overflow. Gjør at boksene tar opp 50% av bredden minus litt plass til margin */
         margin: 10px;
     }
+
+    .aktivitet-tekst {
+        background-color: rgba(0, 0, 0, 0.5);
+        border-radius: 10px;
+    } /*Bakgrunnsfarge på tekst i aktivitetsbokser for accessibility*/
     
     /* oppsett for innholdet på aktivitetene*/
     .aktivitetsside .aktivitetsoppsett {
