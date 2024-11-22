@@ -792,7 +792,7 @@ men rekkefølgen på boksene må endres da de vil vises i 1 kolonne, som på mob
 
     /* stil og effekt for knappene på aktivitetene*/
     .aktivitetsside .aktivitet-knapp {
-        background-color: rgb(80, 166, 99);
+        background-color: rgb(43, 125, 61);
         color: white;
         padding: 10px 20px;
         border: none;
@@ -802,7 +802,7 @@ men rekkefølgen på boksene må endres da de vil vises i 1 kolonne, som på mob
     }
     
     .aktivitetsside .aktivitet-knapp:hover {
-        background-color: rgb(96, 196, 118);
+        background-color: rgb(53, 156, 75);
         transform: scale(1.05);
     }
     
@@ -866,7 +866,7 @@ men rekkefølgen på boksene må endres da de vil vises i 1 kolonne, som på mob
      }
 
     .aktivitetsside .footer-innhold ul li a{
-        background-color: rgb(80, 166, 99);
+        background-color: rgb(43, 125, 61);
         font-size: 1.2em;
         margin-right: 4vw;
         text-decoration: none;
