@@ -27,7 +27,7 @@ img {
 }
 
 button {
-    font-family: Montserrat;
+    font-family: Montserrat, Helvetica, Arial;
 }
 
 button:hover, a:hover { 
@@ -449,6 +449,10 @@ figcaption {
         padding-bottom: 2%;
     }
 
+    .sosiale-medier li a:hover, .footer-informasjon li a:hover, .kontakt-informasjon li a:hover{
+        color: rgb(255, 255, 255);
+    }
+
 
 /* HOVEDSIDE FOR MOBILTELEFON */
 @media screen and (max-width: 600px) { 
@@ -478,8 +482,8 @@ figcaption {
     }
 
     figcaption {
-        position: relative;
-    }
+        position: absolute;
+    } 
 
     .matmod-hovedbilde {
         max-width: 98vw;
@@ -487,11 +491,9 @@ figcaption {
     }
 
     .oversikt-tabell {
-        width: 100%;
-        max-width: 100%;
         border-spacing: 5px;
-        font-size: 12px;   
-    }
+        font-size: 2.8vw;   
+    } 
 
     .ingress {
         font-size: 3.5vw;
@@ -500,7 +502,8 @@ figcaption {
     .main-grid, .second-grid {
         grid-template-columns: 1fr;
         /*grid-template-rows: 1fr;*/ 
-        grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)) /* Juster minimum px */
+        grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); /* Juster minimum px */
+        gap: 15px; /* gir plass til figcaption */
     } 
 
     .hva-kan-du-jobbe-som {order: 0;}
@@ -676,7 +679,7 @@ figcaption {
 
 
 /*FOR NETTBRETT */
-@media screen and (max-width: 1024px) { /* bredden til iPad Pro */
+@media screen and (max-width: 1200px) { 
     .lilla-student-bilde {order: 0;}
     .hva-kan-du-jobbe-som {order: 1;}
     .hva-kan-du-jobbe-som {order: 2;}
@@ -689,14 +692,13 @@ figcaption {
     .digital-bilde {order: 9;}
     .hva-koster-det {order: 10;}
     .slik-søker-du {order: 11;}
+
+    .main-grid, .second-grid {
+        gap: 10px; /* gir plass til figcaption */
+    } 
 }
 /*for nettbrett fungerer siden i utgangspunktet greit uten tilpasninger, 
 men rekkefølgen på boksene må endres da de vil vises i 1 kolonne, som på mobiltelefon. */
-
-/*hovereffekt til linkene i hovedsiden(footer)*/
-.sosiale-medier li a:hover, .footer-informasjon li a:hover, .kontakt-informasjon li a:hover{
-    color: rgb(210, 190, 190);
-}
 
 
 
@@ -933,6 +935,10 @@ men rekkefølgen på boksene må endres da de vil vises i 1 kolonne, som på mob
 
 /* GITHUB SIDE */
 
+.github-innledning {
+
+}
+
     .githubside main {
         padding-left: 2vw;
         padding-right: 2vw;
@@ -942,12 +948,32 @@ men rekkefølgen på boksene må endres da de vil vises i 1 kolonne, som på mob
     .github-bilder {
         display: flex;
         gap: 10px;
+        flex-wrap: wrap;
     }
 
     .githubside figure {
         margin: 0;
         flex: 1; /* Hvert bilde tar opp like mye plass.*/
+      /*  min-width: 350px; /* Responsive design: bildene plasseres oppå hverandre når skjermen blir for liten for 2x min-width */
     }
+
+    .githubside figure img {
+        width: 100%;
+        display: block;
+    }
+
+    @media (max-width: 800px) {
+          
+        .github-bilder {
+        flex-direction: column;  
+        align-items: center;
+        }
+
+       .githubside figure {
+        flex: 1 1 100%;          /* Bildene tar opp hele skjermen i bredden*/
+    }
+     
+    } 
 
 
 
@@ -966,9 +992,13 @@ men rekkefølgen på boksene må endres da de vil vises i 1 kolonne, som på mob
 
 
 
+/* ACCESSIBILITY SIDE */
 
 
-
+.accessibilityside main {
+    padding-left: 2vw;
+    padding-right: 2vw;
+}
 
 
 
@@ -983,19 +1013,19 @@ men rekkefølgen på boksene må endres da de vil vises i 1 kolonne, som på mob
     Koden under er et plaster på såret, da vi ikke har klart å finne årsaken. Løsningen har vi funnet på stack overflow */
 
     @media (min-width: 1800px) and (max-width: 2178px) {
-        .aktivitetsside header {
+        .aktivitetsside header, .githubside header, .accessibilityside header {
             flex-direction: row; 
         }
-        .aktivitetsside header>nav {
+        .aktivitetsside header>nav, .githubside header>nav, .accessibilityside header>nav {
             margin-top: -2vw;
         }
     }
 
     @media (min-width: 750px) and (max-width: 1225px) {
-        .aktivitetsside header {
+        .aktivitetsside header, .githubside header, .accessibilityside header {
             flex-direction: row; 
         }
-        .aktivitetsside header>nav {
+        .aktivitetsside header>nav, .githubside header>nav, .accessibilityside header>nav {
             margin-top: -1vw;
         }
     }
