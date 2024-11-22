@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/x-icon" href="bilder/favicon.ico">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+    <title>Accessibility</title>
+</head>
+
+<body>
+    <header>
+        <a href="index.html">
+            <picture>
+                <source media="(min-width: 1800px)" srcset="bilder/oslomet-logo-transparent-large.webp">
+                <source media="(max-width: 1799px)" srcset="bilder/oslomet-logo-transparent-medium.webp">
+                <source media="(max-width: 600px)" srcset="bilder/oslomet-logo-transparent-small.webp"> 
+                <img class="oslomet-logo"src="bilder/oslomet-logo-transparent.png" alt="Oslomet-logo. Trykk for å returnere til hovedsiden">
+            </picture>
+        </a>
+        <nav> 
+            <a href="accessibility.html">Accessibility</a>
+            <a href="github.html">Github</a>
+            <a href="activity.html">Activity</a>
+        </nav>
+    </header>
+
+<main>
+    <section class="innledning">
+        <h1>Accessibility</h1>
+    </section>
+
+    <section class="accessibility_main">
+        <h2>Tabellen i "Studiets oppbygging"</h2>
+        <p>Til å begynne med var strekene som delte radene og kolonnene i tabellen lik tykkelse, men vi følte at dette fikk tabellen til å virke litt uorganisert og vanskelig å se på. Vi endret strekene som delte radene til å bli stiplet og ha redusert tykkelse. Vi endret så tabellen slik at annenhver kolonne fikk en annerledes farge for å gjøre det enda enklere å se forskjellen på dem.</p>
+        <p>Tanken var først å markere valgfagene med blått, men hvis brukere kanskje er fargeblinde kan det være et problem. Løsningen vi fant var å i stedet markere obligatoriske fag i tabellen med understrek. Et notat ble lagt inn over tabellen for å forklare dette.</p>
+
+        <h2>Automatisert test</h2>
+        <p>Vi brukte Firefox sitt innebydge Inspect-verktøy for å sjekke accessibility.</p>
+        <figure class="automatisert_test_bilde">
+            <img src="bilder/accessibility/automatisert_test.webp" alt="Firefox gjør automatisert test på siden Activity">
+            <figcaption>Test utført på siden Activity</figcaption>
+        </figure>
+        <p>i fikk utslag om manglende kontrast på underteksten til bildene og tre av tekstboksene (“Hvordan foregår undervisningen?”, “Slik søker du” og “Studenthistorier”), og et utslag om manglende caption på et bilde. Fikk også utslag om manglende kontrast på Activity (teksten på noen av bildene og alle knappene for å lese videre).</p>
+    </section>
+
+</main>
+    
+</body>
+</html>

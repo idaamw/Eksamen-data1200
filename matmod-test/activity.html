@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/x-icon" href="bilder/favicon.ico">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+    <title>Aktiviteter</title>
+</head>
+
+<body class="aktivitetsside">
+    <header>
+        <picture>
+            <source media="(min-width: 1800px)" srcset="bilder/activity/oslomet-logo-hvit-large.webp">
+            <source media="(max-width: 1799px)" srcset="bilder/activity/oslomet-logo-hvit-medium.webp">
+            <source media="(max-width: 600px)" srcset="bilder/activity/oslomet-logo-hvit-small.webp"> 
+            <a href="index.html">
+            <img class="oslomet-logo"src="bilder/activity/oslomet-logo-hvit.webp" alt="Oslomet-logo. Trykk for å returnere til hovedsiden">
+            </a>
+        </picture>
+        <nav> 
+            <a href="accessibility.html">Accessibility</a>
+            <a href="github.html">Github</a>
+            <a href="activity.html">Activity</a>
+        </nav>
+    </header>
+
+    <main>
+
+    <!--Introduksjonsseksjoner "fjelltur og tureventyr"-->
+    <section class="innledning">
+        <h1>Fjelltur</h1>
+        <p>Utforsk ulike interaktive arrangementer og økter designet for å berike læringsreisen din.</p>
+    </section>
+
+    <section class="innledning">
+        <h1>Tureventyr</h1>
+        <p>Fottur er en aktivitet som kobler deg til naturen, lar deg utforske vakre landskap, oppleve utendørs eventyr og bli i bedre form. Her er noen av de beste turstiene og tips for å komme i gang</p>
+    </section>
+
+    <!-- Hovedinnhold -->
+    <section class="main-grid">
+
+        <div class="aktiviteter" style="background-image: url('bilder/activity/trolltunga.webp')" aria-label="Trolltunga">
+            <div class="aktivitetsoppsett">
+                <h2>Utforsk de majestetiske fjellene</h2>
+                <p>Å gå tur på fjellstier gir fantastisk utsikt og en utfordrende opplevelse. Det er en flott måte å presse fysiske grenser på, samtidig som du nyter frisk luft og natur.</p>
+                <a href="https://ut.no/turforslag/115074/trolltunga-unik-hyfjellstur-ved-hardangerfjorden" class="aktivitet-knapp">Utforsk denne stien</a>
+            </div>
+        </div>
+
+        <div class="aktiviteter" style="background-image: url('bilder/activity/kjeragbolten.webp');" aria-label="Kjeragbolten">
+            <div class="aktivitetsoppsett">
+                <h2>Kjeragbolten</h2>
+                <p>Kjerag er majesteten i Lysefjorden. Med sine 1000 loddrette meter er fjellet en flott opplevelse både fra fjorden og fra toppen.</p>
+                <a href="https://ut.no/turforslag/118458905/fottur-til-kjerag-og-kjeragbolten-majesteten-i-lysefjorden" class="aktivitet-knapp">Lær mer</a>
+            </div>
+        </div>
+
+        <div class="aktiviteter" style="background-image: url('bilder/activity/preikestolen.webp');" aria-label="Preikestolen">
+            <div class="aktivitetsoppsett">
+                <h2>Preikestolen</h2>
+                <p>Norge har noen av de mest ikoniske turstiene i verden, som for eksempel den populære Preikestolen. Disse turene gir fantastisk utsikt over fjorder og natur.</p>
+                <a href="https://ut.no/sted/143248/preikestolen" class="aktivitet-knapp">Se mer</a>
+            </div>
+        </div>
+
+        <div class="aktiviteter" style="background-image: url('bilder/activity/lofoten.webp');" aria-label="Lofoten">
+            <div class="aktivitetsoppsett">
+                <h2>Lofoten</h2>
+                <p>Uansett årstid er Lofoten en reise gjennom praktfull natur.</p>
+                <a href="https://ut.no/utforsker/omrade/124373/lofoten/turforslag" class="aktivitet-knapp">Les mer</a>
+            </div>
+        </div>
+    </section>
+
+    <!--Seksjon for turutstyr med lenker-->
+    <article class="informasjonslister">
+        <section class="turutstyr">
+            <h2>Essensielt turutstyr</h2>
+            <p>Å ha riktig utstyr er viktig for en komfortabel og morsom tur. Her er en rask guide til anbefalt utstyr:</p>
+            <ul>
+                <li><a href="https://www.naturkompaniet.no/herre/sko-og-stovler/tur-og-fjellsko/">Tursko</a></li>
+                <li><a href="https://www.naturkompaniet.no/utstyr/ryggsekker-og-vesker/">Ryggsekker og Utstyr</a></li>
+                <li><a href="https://www.naturkompaniet.no/herre/klaer/bukser/">Utendørs Klær</a></li>
+            </ul>
+        </section>
+
+        <!--seksjon for sikkerhetstips-->
+        <section class="sikkerhetstips">
+            <h2>Sikkerhetstips</h2>
+            <p>Sikkerheten på tur er avgjørende, gode forberedelser kan være forskjellen mellom en trygg opplevelse og en risikofylt situasjon.</p>
+            <ul>
+                <li>Planlegg turen: Sjekk værmeldingen og ruten før du drar</li>
+                <li>Fortell noen hvor du skal, og når du forventer å være tilbake.</li>
+                <li>Hold deg på merkede stier: Dette reduserer sjansen for å gå seg bort og beskytter naturen.</li>
+            </ul>        
+        </section>
+
+        <!--seksjon for turruter med lenker-->
+        <section class="turruter">
+            <h2>Populære turruter</h2>
+            <p>Her er noen berømte turstier du kanskje vil utforske:</p>
+            <ul>
+                <li><a href="https://ut.no/sted/146128071/mardalsfossen">Mardalsfossen</a></li>
+                <li><a href="https://ut.no/utforsker/omrade/122579/rondane-nasjonalpark/turforslag?type=fottur">Rondane Nasjonalpark</a></li>
+                <li><a href="https://ut.no/utforsker/stedsnavn/616966/besseggen/turforslag?type=fottur">Besseggen</a></li>
+            </ul>
+        </section>
+    </article>
+
+   </main>
+
+    <!-- Footer -->
+        <footer>
+             <nav class="footer-innhold">
+                <h2>Følg oss</h2>
+                    <ul>
+                        <li><a href="https://www.facebook.com/oslomet/">Facebook</a></li>
+                        <li><a href="https://x.com/oslomet">Twitter</a></li>
+                        <li><a href="https://www.instagram.com/oslomet/?hl=nb">Instagram</a></li>
+                    </ul>
+                    <picture>
+                        <source media="(min-width: 2000px)" srcset="bilder/activity/oslomet-storbyuniversitetet-skrift-hvit-large.webp">
+                         <source media="(max-width: 600px)" srcset="bilder/activity/oslomet-storbyuniversitetet-skrift-hvit-small.webp">
+                        <img class="storbyuniversitetet-bilde" src="bilder/activity/oslomet-storbyuniversitetet-skrift-hvit.webp" alt="Oslo Metropolitan University - Storbyuniversitetet">
+                    </picture>
+                    <p>Opphav til bilder: Pexels og privat.</p>
+                </nav>
+        </footer>
+    </body>
+</html>
