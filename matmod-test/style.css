@@ -35,7 +35,7 @@ button:hover, a:hover {
 }
 
 figcaption {
-    color: gray;
+    color: black;
     font-size: small;
     position: absolute; /* forhindrer at figcaption "stjeler" plass fra bildet" */
 }
@@ -166,7 +166,7 @@ figcaption {
     }
     
     .hvordan-foregår-undervisningen {
-        background-color: rgb(103, 134, 144);
+        background-color: rgb(60, 98, 101);
         color: white;
     }
     
@@ -184,7 +184,7 @@ figcaption {
     }
     
     .slik-søker-du, .slik-søker-du a {
-        background-color: rgb(103, 134, 144);
+        background-color: rgb(60, 98, 101);
         color: white;
     }
     
@@ -338,7 +338,7 @@ figcaption {
         margin-right: 5%;
     }
     .spa-fremtiden-aside, .spa-fremtiden-aside a { 
-        background-color: rgb(103, 134, 144);
+        background-color: rgb(60, 98, 101);
         color: white;
         text-decoration: none;
         overflow: hidden;  /* setter aside boks til samme høyde som bildet */
