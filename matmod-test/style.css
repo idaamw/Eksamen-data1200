@@ -1,3 +1,37 @@
+/* Innhold:
+
+    Hovedside
+        Header
+        Innledning (mellom header og hoved-grid)
+        Details
+        Main-grid og second-grid
+        Bilder i hoved-grid
+        Studiets oppbygging-tabell
+        Studiets oppbygging-tabell @media (max-width: 800px)
+        Andre fag og studenthistorier
+        Aside: spå fremtiden
+        Footer
+
+        Hovedside for mobiltelefon
+        Hovedside for ultra-wide skjerm
+        Hovedside for nettbrett
+
+    Activityside 
+        Aktivitetsbokser
+        Informasjon under aktivitetsbokser  
+        Footer
+        Activity for mobil
+        Activity for ultra-wide skjerm 
+
+    Github
+    Accessibility
+    */
+
+
+
+
+/* HOVEDSIDE: MATEMATISK MODELLERING */
+
 body {
     overflow-x: hidden;
     margin: 0;
@@ -325,7 +359,7 @@ button:hover, a:hover {
 
 
 
-/*ASIDE*/
+/*ASIDE: SPÅ FREMTIDEN*/
     .spa-fremtiden-aside{
         margin-left: 5%;
         margin-right: 5%;
@@ -485,9 +519,7 @@ button:hover, a:hover {
     }
     
     .main-grid, .second-grid {
-        grid-template-columns: 1fr;
-        /*grid-template-rows: 1fr;*/ 
-        grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); /* Juster minimum px */
+        grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); /* grid boksene er minst 350px, og maks 1fr */
     } 
 
     .hva-kan-du-jobbe-som {order: 0;}
@@ -506,8 +538,8 @@ button:hover, a:hover {
 
     .footer-wrapper {
         grid-template-columns: 1fr;
-       /* grid-template-rows: 1fr; /* nødvendig? */
     }
+
     .footer-wrapper > * {
         padding-top: 0%;
     }
@@ -677,11 +709,11 @@ men rekkefølgen på boksene må endres da de vil vises i 1 kolonne, som på mob
 
 
 
-/*STYLING FOR ACTIVITY PAGE*/
+/*STYLING FOR ACTIVITY SIDE*/
 
     /* Bakgrunnsbilde for hele siden*/
     body.aktivitetsside {
-        background-image: url('bilder/activity/fjellandskap.webp'); /*Bildet er hentet fra pexels*/
+        background-image: url('bilder/activity/fjellandskap.webp'); /*fotograf/opphavsperson: xijian, kilde: iStock*/
         background-repeat: no-repeat;
         background-size: cover;
         background-position: center; 
@@ -752,7 +784,7 @@ men rekkefølgen på boksene må endres da de vil vises i 1 kolonne, som på mob
         align-items: center;
     }
     
-    /* stil for text i aktivitetene*/
+    /* stil for tekst i aktivitetene*/
     .aktivitetsside .aktiviteter h2 {
         font-size: 1.5rem;
         margin: 0;
@@ -785,7 +817,6 @@ men rekkefølgen på boksene må endres da de vil vises i 1 kolonne, som på mob
     
 
     /* informasjon under aktivitetsoppsett */
-
     .aktivitetsside .turutstyr, .aktivitetsside .turruter , .aktivitetsside .sikkerhetstips, .aktivitetsside .turutstyr a , .aktivitetsside .turruter a{
         color:white
     }
@@ -910,6 +941,10 @@ men rekkefølgen på boksene må endres da de vil vises i 1 kolonne, som på mob
         padding-bottom: 3vh;
     }
 
+    .githubside h2 {
+        font-size: 20px;
+        padding-top: 2.5vh;
+    }
 
     .github-bilder {
         display: flex;
@@ -921,7 +956,6 @@ men rekkefølgen på boksene må endres da de vil vises i 1 kolonne, som på mob
     .github-bilder picture {
         margin: 0;
         flex: 1; /* Hvert bilde tar opp like mye plass.*/
-      /*  min-width: 350px; /* Responsive design: bildene plasseres oppå hverandre når skjermen blir for liten for 2x min-width */
     }
 
     .github-bilder picture img {
@@ -934,12 +968,8 @@ men rekkefølgen på boksene må endres da de vil vises i 1 kolonne, som på mob
         margin-bottom: 2%;
     }
 
-    .githubside h2 {
-        font-size: 20px;
-        padding-top: 2.5vh;
-    }
 
-    @media (max-width: 1000px) {
+    @media (max-width: 1000px) {   /*For små skjermer*/
           
         .github-bilder {
         flex-direction: column;  
@@ -948,12 +978,8 @@ men rekkefølgen på boksene må endres da de vil vises i 1 kolonne, som på mob
 
        .github-bilder picture {
         flex: 1 1 100%;          /* Bildene tar opp hele skjermen i bredden*/
-    }
-     
+        }
     } 
-
-
-
 
 
    
@@ -962,8 +988,7 @@ men rekkefølgen på boksene må endres da de vil vises i 1 kolonne, som på mob
     .accessibilityside main {
         padding-left: 3vw;
         padding-right: 3vw;
-        padding-top: 3vh;
-        
+        padding-top: 3vh;  
     }
 
     .accessibilityside h2 {
