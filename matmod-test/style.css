@@ -681,7 +681,7 @@ men rekkefølgen på boksene må endres da de vil vises i 1 kolonne, som på mob
 
     /* Bakgrunnsbilde for hele siden*/
     body.aktivitetsside {
-        background-image: url('bilder/activity/fjellandskap.jpg'); /*Bildet er hentet fra pexels*/
+        background-image: url('bilder/activity/fjellandskap.webp'); /*Bildet er hentet fra pexels*/
         background-repeat: no-repeat;
         background-size: cover;
         background-position: center; 
@@ -932,6 +932,11 @@ men rekkefølgen på boksene må endres da de vil vises i 1 kolonne, som på mob
         margin-bottom: 2%;
     }
 
+    .githubside h2 {
+        font-size: 20px;
+        padding-top: 2.5vh;
+    }
+
     @media (max-width: 1000px) {
           
         .github-bilder {
@@ -949,21 +954,8 @@ men rekkefølgen på boksene må endres da de vil vises i 1 kolonne, som på mob
 
 
 
-
    
-
-
-
-
-
-
-
-
-
-
-
 /* ACCESSIBILITY SIDE */
-
 
     .accessibilityside main {
         padding-left: 3vw;
@@ -986,26 +978,9 @@ men rekkefølgen på boksene må endres da de vil vises i 1 kolonne, som på mob
         margin: 0;
     }
 
-    @media (max-width: 1000px) {
-          
-        .accessibilityside figure {
-            margin: 0;
-        }
-    }
-     
-
-
-
-
-
-
-
     .accessibilityside .storbyuniversitetet-bilde {
         margin-bottom: 2%;
     }
-
-
-
 
 
 
@@ -1033,5 +1008,3 @@ men rekkefølgen på boksene må endres da de vil vises i 1 kolonne, som på mob
             margin-top: -1vw;
         }
     }
-
-
