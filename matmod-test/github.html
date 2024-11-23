@@ -50,13 +50,18 @@
 
         <figure class="github-bilder">
             <picture class="github-commit1">
+                <source media="(max-width: 600px)" srcset="bilder/github/github-screenshot1-small.webp"> 
                 <img src="bilder/github/github-screenshot1.webp" alt="The group members alternate pushing their commits to github">
             </picture>
 
             <picture class="github-commit2">
+                <source media="(max-width: 600px)" srcset="bilder/github/github-screenshot2-small.webp"> 
                 <img src="bilder/github/github-screenshot2.webp" alt="Github facilitates seamless teamwork by allowing group members to push and merge their work">
             </picture>    
         </figure>
+
+        <!--we realize cropping the code as done in the images above may(?) be unfortunate, 
+        but we had to decrease the image width in order to make images readable on narrow screens.-->
 
         <section>
             <h2>Benefits of GitHub</h2>
@@ -75,12 +80,16 @@
 
         <figure class="github-bilder">
             <picture class="github-changes1">
-                <img src="bilder/github/github-screenshot3.webp" alt="Changes made in code in relation to responsive design">
+                <source media="(max-width: 600px)" srcset="bilder/github/github-screenshot3-small.webp"> 
+                <img src="bilder/github/github-screenshot3.webp" alt="Changes made in code in relation accessibility">
+                <figcaption>We swapped from aria-label to aria-describedby as we wanted the original text to be available for screen readers.</figcaption>
             </picture>
             
             <picture class="github-changes2">
-                <img src="bilder/github/github-screenshot4.webp" alt="Changes made in code to use alternating colors on table rows for increased readability">
-            </picture>
+                <source media="(max-width: 600px)" srcset="bilder/github/github-screenshot4-small.webp"> 
+                <img src="bilder/github/github-screenshot4.webp" alt="Changes in code for improved semantics.">
+                <figcaption>Changes made in code to apply the picture tag, as it facilitates responsive design by allowing different sized photos for different sized screens.</figcaption>
+            </picture>  
         </figure>
 
     </main>

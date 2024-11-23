@@ -47,9 +47,10 @@
         <p>For å markere forskjellen mellom obligatoriske og valgfrie fag var tanken først å markere valgfagene med blå bakgrunnsfarge, men for eventuelt fargeblinde brukere kan det være et problem. Vi valgte å løse dette ved å heller markere obligatoriske fag i tabellen med understrek. 
             Vi innså etter hvert at det heller ikke er en fullstendig inkluderende løsning, da brukere som er avhengige av skjermlesere ikke vil oppfatte understrekingen. I jakten på en løsning på dette ble vi kjent med ARIA-attributtene. I tabellen har vi brukt aria-describedby da dette 
             attributtet lar oss legge til ekstra informasjon for skjermlesere, uten å overskrive det originale innholdet.</p>
-        <figure>
+        <picture>
+            <source media="(max-width: 800px)" srcset="bilder/accessibility/tabell-accessibility-small.webp"> 
             <img src="bilder/accessibility/tabell-accessibility.webp" alt="Vi har tatt i bruk aria-describedby og strong-tag for å gjøre tabellen mer inkluderende">
-        </figure>
+        </picture>
 
         <h2>Responsivt design</h2>
         <p>En viktig del av inkluderende design av nettside er å sørge for at siden er responsiv slik at den kan vises på ulike enheter. Ved bruk av @media har vi lagt til CSS kode 
@@ -60,9 +61,10 @@
         
         <h2>Automatisert test</h2>
         <p>Vi brukte Firefox sitt innebydge Inspect-verktøy for å sjekke accessibility.</p>
-        <figure class="automatisert_test_bilde">
-            <img src="bilder/accessibility/automatisert_test.webp" alt="Firefox gjør automatisert test på siden Activity">
-        </figure>
+        <picture class="automatisert_test_bilde">
+            <source media="(max-width: 1000px)" srcset="bilder/accessibility/automatisert-test-small.webp"> 
+            <img src="bilder/accessibility/automatisert-test.webp" alt="Firefox gjør automatisert test på siden Activity">
+        </picture>
         <p>Testen ga utslag om manglende kontrast på noen av tekstboksene på hovedsiden og activity-siden. Vi justerte fargene, og ga svart bakgrunn til tekstene i Activity-boksene.</p>
         
     </article>
