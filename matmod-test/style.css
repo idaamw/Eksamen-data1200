@@ -904,8 +904,9 @@ men rekkefølgen på boksene må endres da de vil vises i 1 kolonne, som på mob
 /* GITHUB SIDE */
 
     .githubside main {
-        padding-left: 2vw;
-        padding-right: 2vw;
+        padding-left: 3vw;
+        padding-right: 3vw;
+        padding-top: 3vh;
     }
 
 
@@ -965,9 +966,33 @@ men rekkefølgen på boksene må endres da de vil vises i 1 kolonne, som på mob
 
 
     .accessibilityside main {
-        padding-left: 2vw;
-        padding-right: 2vw;
+        padding-left: 3vw;
+        padding-right: 3vw;
+        padding-top: 3vh;
+        
     }
+
+    .accessibilityside h2 {
+        font-size: 20px;
+        padding-top: 2.5vh;
+    }
+
+    .accessibility-ingress {
+        font-size: large;
+        font-weight: 600;
+    }
+
+    .accessibilityside figure {
+        margin: 0;
+    }
+
+    @media (max-width: 1000px) {
+          
+        .accessibilityside figure {
+            margin: 0;
+        }
+    }
+     
 
 
 

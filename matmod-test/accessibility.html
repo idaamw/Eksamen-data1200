@@ -29,7 +29,7 @@
 <main>
     
     <h1>Accessibility</h1>
-    <p>Web-accessibility, eller inkluderende webdesign, handler om å utvikle teknologi som kan tas i bruk av så mange mennesker som mulig, uavhengig av deres bakgrunn eller funksjonsevne. </p>
+    <p class="accessibility-ingress">Web-accessibility, eller inkluderende webdesign, handler om å utvikle teknologi som kan tas i bruk av så mange mennesker som mulig, uavhengig av deres bakgrunn eller funksjonsevne. </p>
 
     <article class="accessibility_main">
         <h2>Generelt</h2>
@@ -42,26 +42,44 @@
             med passende headings for enklere navigering. Nærmere beskrivelse av hva de ulike elementene gjør finnes kommentert i koden.</p>
         
         <h2>Tabellen i "Studiets oppbygging"</h2>
-        <p>Til å begynne med var strekene som delte radene og kolonnene i tabellen lik tykkelse, men vi følte at dette fikk tabellen til å virke litt uorganisert og vanskelig å se på. Vi endret strekene som delte radene til å bli stiplet og ha redusert tykkelse. Vi endret så tabellen slik at annenhver kolonne fikk en annerledes farge for å gjøre det enda enklere å se forskjellen på dem.</p>
-        <p>Tanken var først å markere valgfagene med blått, men hvis brukere kanskje er fargeblinde kan det være et problem. Løsningen vi fant var å i stedet markere obligatoriske fag i tabellen med understrek. Et notat ble lagt inn over tabellen for å forklare dette.</p>
+        <p>For å gjøre tabellen mer lettleselig ga vi blå bakgrunnsfarge til annenhver rad. Videre brukte vi &#60;strong&#62 taggen for å gi emnenavnene fet skrift. Dette er positivt for skjermlesere, da de vil lese innholdet med ekstra trykk for å vise at innholdet er særlig betydelig.</p>
+        <p>For å markere forskjellen mellom obligatoriske og valgfrie fag var tanken først å markere valgfagene med blå bakgrunnsfarge, men for eventuelt fargeblinde brukere kan det være et problem. Vi valgte å løse dette ved å heller markere obligatoriske fag i tabellen med understrek. 
+            Vi innså etter hvert at det heller ikke er en fullstendig inkluderende løsning, da brukere som er avhengige av skjermlesere ikke vil oppfatte understrekingen. I jakten på en løsning på dette ble vi kjent med ARIA-attributtene. I tabellen har vi brukt aria-describedby da dette 
+            attributtet lar oss legge til ekstra informasjon for skjermlesere, uten å overskrive det originale innholdet.</p>
+        <figure>
+            <img src="bilder/accessibility/tabell-accessibility.webp" alt="Vi har tatt i bruk aria-describedby og strong-tag for å gjøre tabellen mer inkluderende">
+        </figure>
 
+        <h2>Responsivt design</h2>
+        <p>En viktig del av inkluderende design av nettside er å sørge for at siden er responsiv slik at den kan vises på ulike enheter. Ved bruk av @media har vi lagt til CSS kode 
+            slik at nettsiden tilpasser seg når den når visse skjermbredder. Vi har også prøvd oss fram med både grid og flexbokser, noe som er ypperlig for responsivt design. På hovedsiden 
+            har vi et grid-oppsett som viser én boks i bredden på små skjermer, to på mellomstore skjermer som laptop, og tre på ekstra store skjermer.</p>
+        <p>Vi har også sjekket nettsiden i Chrome, Edge, og Firefox for å forsikre oss om at den fungerer på tvers av nettlesere.</p>
+        
+        
         <h2>Automatisert test</h2>
         <p>Vi brukte Firefox sitt innebydge Inspect-verktøy for å sjekke accessibility.</p>
         <figure class="automatisert_test_bilde">
             <img src="bilder/accessibility/automatisert_test.webp" alt="Firefox gjør automatisert test på siden Activity">
             <figcaption>Test utført på siden Activity</figcaption>
         </figure>
-        <p>i fikk utslag om manglende kontrast på underteksten til bildene og tre av tekstboksene (“Hvordan foregår undervisningen?”, “Slik søker du” og “Studenthistorier”), og et utslag om manglende caption på et bilde. Fikk også utslag om manglende kontrast på Activity (teksten på noen av bildene og alle knappene for å lese videre).</p>
+        <p>Testen ga utslag om manglende kontrast på noen av tekstboksene på hovedsiden. Også teksten i boksene på Activity-siden ga utslag. Vi justerte fargene, og ga svart bakgrunn til tekstene i Activity-boksene.</p>
         
-        <h2>Responsivt design</h2>
-        <p>En viktig del av inkluderende design av nettside er å sørge for at siden er responsiv slik at den kan vises på ulike enheter. Ved bruk av @media har vi lagt til CSS kode
-            slik at nettsiden tilpasser seg når den når visse skjermbredder. Vi har også prøvd oss fram med både grid og flexbokser, noe som er ypperlig for responsivt design. På hovedsiden 
-            har vi et grid-oppsett som viser én boks i bredden på små skjermer, to på mellomstore skjermer som laptop, og tre på ekstra store skjermer.</p>
-        <p>Da vi alle tre bruker forskjellig nettlesere, har vi også forsikret oss om at siden fungerer godt på Chrome, Edge og Firefox.</p>
    
+        <h2>Oppsummering</h2>
+        <p>For å oppsummere er inkluderende design viktig for at så mange som mulig skal kunne bruke nettsiden på en tilfredsstillende måte. For å oppnå dette har vi særlig 
+            fokusert på semantisk strukturering, responsivt design, fargekontraster og alternative tekster/ARIA.</p>
     </article>
 
 </main>
+
+<footer>
+    <picture>
+        <source media="(min-width: 2000px)" srcset="bilder/oslomet-storbyuniversitetet-skrift-large.webp">
+        <source media="(max-width: 600px)" srcset="bilder/oslomet-storbyuniversitetet-skrift-small.webp">
+        <img class="storbyuniversitetet-bilde" src="bilder/oslomet-storbyuniversitetet-skrift.png" alt="Oslo Metropolitan University - Storbyuniversitetet">
+    </picture>
+ </footer>
     
 </body>
 </html>
