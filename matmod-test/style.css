@@ -34,12 +34,6 @@ button:hover, a:hover {
     cursor: pointer; /*Museknappen endrer seg til hånd når den er over linker og knapper*/
 }
 
-figcaption {
-    color: black;
-    font-size: small;
-    position: absolute; /* forhindrer at figcaption "stjeler" plass fra bildet" */
-}
-
 
 /*HEADER*/
 
@@ -73,9 +67,6 @@ figcaption {
     .innledning {
         text-align: center;
     } 
-
-    .matmod-hovedbilde figcaption {
-        position: relative;}
 
     .matmod-hovedbilde {
         margin-left: auto;
@@ -316,6 +307,7 @@ figcaption {
         margin: 5vw;
     }
 
+
     .andre-studier-button {
         background-color: rgb(218, 228, 236);
         border: none;
@@ -324,6 +316,7 @@ figcaption {
         text-decoration: none;
         margin-bottom: 5px;
         margin-left: 2px;
+        font-size: large;
     }
 
     .andre-studier-link {
@@ -481,10 +474,6 @@ figcaption {
         font-size: 7vw;
     }
 
-    figcaption {
-        position: absolute;
-    } 
-
     .matmod-hovedbilde {
         max-width: 98vw;
         margin-top: 0.5vw;
@@ -503,7 +492,6 @@ figcaption {
         grid-template-columns: 1fr;
         /*grid-template-rows: 1fr;*/ 
         grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); /* Juster minimum px */
-        gap: 15px; /* gir plass til figcaption */
     } 
 
     .hva-kan-du-jobbe-som {order: 0;}
@@ -614,16 +602,6 @@ figcaption {
         margin-left: 7.5%;
     }
 
-    .andre-studier {
-        width: 85%;
-        margin-left: 7.5%;
-        margin-right: 7.5%;  
-    }
-
-    .andre-studier button {
-        font-size: large;
-    } 
-
     .anvendt-master-h4 {
         font-size: 1vw;
         padding-left: 0.5vw;
@@ -692,10 +670,6 @@ figcaption {
     .digital-bilde {order: 9;}
     .hva-koster-det {order: 10;}
     .slik-søker-du {order: 11;}
-
-    .main-grid, .second-grid {
-        gap: 10px; /* gir plass til figcaption */
-    } 
 }
 /*for nettbrett fungerer siden i utgangspunktet greit uten tilpasninger, 
 men rekkefølgen på boksene må endres da de vil vises i 1 kolonne, som på mobiltelefon. */
@@ -934,10 +908,6 @@ men rekkefølgen på boksene må endres da de vil vises i 1 kolonne, som på mob
 
 
 /* GITHUB SIDE */
-
-.github-innledning {
-
-}
 
     .githubside main {
         padding-left: 2vw;

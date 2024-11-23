@@ -9,7 +9,7 @@
     <title>Accessibility</title>
 </head>
 
-<body>
+<body class="accessibilityside">
     <header>
         <a href="index.html">
             <picture>
@@ -27,11 +27,20 @@
     </header>
 
 <main>
-    <section class="innledning">
-        <h1>Accessibility</h1>
-    </section>
+    
+    <h1>Accessibility</h1>
+    <p>Web-accessibility, eller inkluderende webdesign, handler om å utvikle teknologi som kan tas i bruk av så mange mennesker som mulig, uavhengig av deres bakgrunn eller funksjonsevne. </p>
 
-    <section class="accessibility_main">
+    <article class="accessibility_main">
+        <h2>Generelt</h2>
+        <p>For at nettsiden skal være lett å lese, har vi valgt farger som gir god kontrast mellom tekst og bakgrunn. Vi har lagt til alternativ tekst på alle bilder, 
+            slik at brukere av skjermlesere, eller folk med treigt internett som ikke laster bilder kan få et mer helhetlig inntrykk av innholdet.</p>
+
+        <h2>Semantisk strukturering</h2>
+        <p>Riktig bruk av semantiske elementer legger til rette for en bedre opplevelse ved bruk av skjermlesere og annen assisterende teknologi. Vi har etter beste evne 
+            strukturert nettsiden med elementer som &#60;header&#62;, &#60;main&#62; og &#60;footer&#62 for å bidra med forståelse av layout, og tags som &#60;nav&#62, &#60;section&#62 og &#60;aside&#62 
+            med passende headings for enklere navigering. Nærmere beskrivelse av hva de ulike elementene gjør finnes kommentert i koden.</p>
+        
         <h2>Tabellen i "Studiets oppbygging"</h2>
         <p>Til å begynne med var strekene som delte radene og kolonnene i tabellen lik tykkelse, men vi følte at dette fikk tabellen til å virke litt uorganisert og vanskelig å se på. Vi endret strekene som delte radene til å bli stiplet og ha redusert tykkelse. Vi endret så tabellen slik at annenhver kolonne fikk en annerledes farge for å gjøre det enda enklere å se forskjellen på dem.</p>
         <p>Tanken var først å markere valgfagene med blått, men hvis brukere kanskje er fargeblinde kan det være et problem. Løsningen vi fant var å i stedet markere obligatoriske fag i tabellen med understrek. Et notat ble lagt inn over tabellen for å forklare dette.</p>
@@ -43,7 +52,14 @@
             <figcaption>Test utført på siden Activity</figcaption>
         </figure>
         <p>i fikk utslag om manglende kontrast på underteksten til bildene og tre av tekstboksene (“Hvordan foregår undervisningen?”, “Slik søker du” og “Studenthistorier”), og et utslag om manglende caption på et bilde. Fikk også utslag om manglende kontrast på Activity (teksten på noen av bildene og alle knappene for å lese videre).</p>
-    </section>
+        
+        <h2>Responsivt design</h2>
+        <p>En viktig del av inkluderende design av nettside er å sørge for at siden er responsiv slik at den kan vises på ulike enheter. Ved bruk av @media har vi lagt til CSS kode
+            slik at nettsiden tilpasser seg når den når visse skjermbredder. Vi har også prøvd oss fram med både grid og flexbokser, noe som er ypperlig for responsivt design. På hovedsiden 
+            har vi et grid-oppsett som viser én boks i bredden på små skjermer, to på mellomstore skjermer som laptop, og tre på ekstra store skjermer.</p>
+        <p>Da vi alle tre bruker forskjellig nettlesere, har vi også forsikret oss om at siden fungerer godt på Chrome, Edge og Firefox.</p>
+   
+    </article>
 
 </main>
     
