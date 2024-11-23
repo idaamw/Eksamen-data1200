@@ -742,7 +742,7 @@ men rekkefølgen på boksene må endres da de vil vises i 1 kolonne, som på mob
     
     /* oppsett for innholdet på aktivitetene*/
     .aktivitetsside .aktivitetsoppsett {
-        background: rgba(0, 0, 0, 0.5);
+        background: rgba(0, 0, 0, 0.7);
         padding: 20px;
         width: 100%;
         height: 100%;
@@ -785,18 +785,16 @@ men rekkefølgen på boksene må endres da de vil vises i 1 kolonne, som på mob
     
 
     /* informasjon under aktivitetsoppsett */
-    .aktivitetsside .informasjonslister {
-        margin-left: 3vw;
-        margin-right: 3vw;
-        margin-top: 4vw;
-    }
 
     .aktivitetsside .turutstyr, .aktivitetsside .turruter , .aktivitetsside .sikkerhetstips, .aktivitetsside .turutstyr a , .aktivitetsside .turruter a{
         color:white
     }
 
     .aktivitetsside .turutstyr, .aktivitetsside .sikkerhetstips, .aktivitetsside .turruter {
-        margin-bottom: 7vh;
+        margin-bottom: 4vh;
+        margin-left: 3vw;
+        margin-right: 3vw;
+        margin-top: 4vw;
     }
     .aktivitetsside .turutstyr li a , .aktivitetsside .turruter li a {
         text-decoration: none;
@@ -869,7 +867,7 @@ men rekkefølgen på boksene må endres da de vil vises i 1 kolonne, som på mob
             margin-right: 2vw;
         }
 
-        .aktivitetsside .informasjonslister {
+        .aktivitetsside .turutstyr, .aktivitetsside .sikkerhetstips, .aktivitetsside .turruter {
             margin-top: 5.5vh;
             margin-bottom: 6vh;
         }
@@ -884,11 +882,11 @@ men rekkefølgen på boksene må endres da de vil vises i 1 kolonne, som på mob
 /* ACTIVITY FOR ULTRA WIDE SKJERM*/
     @media screen and (min-width: 1800px) { 
         .aktivitetsside p, .aktivitetsside .innledning p, .aktivitetsside .main-grid p, 
-        .aktivitetsside .main-grid a, .informasjonslister li {
+        .aktivitetsside .main-grid a, .aktivitetsside .turutstyr li, .aktivitetsside .sikkerhetstips li, .aktivitetsside .turruter li {
             font-size: 1.5vw;
         }
 
-        .aktivitetsside .main-grid h2, .informasjonslister h2 {
+        .aktivitetsside .main-grid h2, .aktivitetsside .turutstyr h2, .aktivitetsside .sikkerhetstips h2, .aktivitetsside .turruter h2 {
             font-size: 1.8vw;
         }
 
@@ -915,27 +913,32 @@ men rekkefølgen på boksene må endres da de vil vises i 1 kolonne, som på mob
         display: flex;
         gap: 10px;
         flex-wrap: wrap;
+        margin: 0;
     }
 
-    .githubside figure {
+    .github-bilder picture {
         margin: 0;
         flex: 1; /* Hvert bilde tar opp like mye plass.*/
       /*  min-width: 350px; /* Responsive design: bildene plasseres oppå hverandre når skjermen blir for liten for 2x min-width */
     }
 
-    .githubside figure img {
+    .github-bilder picture img {
         width: 100%;
         display: block;
     }
 
-    @media (max-width: 800px) {
+    .githubside .storbyuniversitetet-bilde {
+        margin-bottom: 2%;
+    }
+
+    @media (max-width: 1000px) {
           
         .github-bilder {
         flex-direction: column;  
         align-items: center;
         }
 
-       .githubside figure {
+       .github-bilder picture {
         flex: 1 1 100%;          /* Bildene tar opp hele skjermen i bredden*/
     }
      
@@ -961,10 +964,20 @@ men rekkefølgen på boksene må endres da de vil vises i 1 kolonne, som på mob
 /* ACCESSIBILITY SIDE */
 
 
-.accessibilityside main {
-    padding-left: 2vw;
-    padding-right: 2vw;
-}
+    .accessibilityside main {
+        padding-left: 2vw;
+        padding-right: 2vw;
+    }
+
+
+
+
+
+
+
+    .accessibilityside .storbyuniversitetet-bilde {
+        margin-bottom: 2%;
+    }
 
 
 
@@ -975,7 +988,7 @@ men rekkefølgen på boksene må endres da de vil vises i 1 kolonne, som på mob
 
 
 
-    /* Av en eller annen grunn hopper linkene i headeren ned under headeren på enkelte skjermbredder. Dette skjer kun på activity-siden.
+    /* Av en eller annen grunn hopper linkene i headeren ned under headeren på enkelte skjermbredder. Dette skjer ikke på hovedsiden, men de andre sidene.
     Koden under er et plaster på såret, da vi ikke har klart å finne årsaken. Løsningen har vi funnet på stack overflow */
 
     @media (min-width: 1800px) and (max-width: 2178px) {
