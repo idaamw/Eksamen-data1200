@@ -347,17 +347,18 @@ button:hover, a:hover {
         padding-right: 54%;
     }
 
-    .spa-fremtiden-aside h5 {
+    .teknologiogdesign {
         padding-left: 4%;
         padding-top: 2%;
         font-size: medium;
-        padding-right: 50%;
+        padding-right: 54%;
+        font-weight: 600;
     }
 
     .spa-fremtiden-aside p {
         padding-left: 4%;
         font-size: medium;
-        padding-right: 50%; /*sørger for at teksten ikke strekker seg forbi bildekanten */
+        padding-right: 54%; /*sørger for at teksten ikke strekker seg forbi bildekanten */
     }
 
 
@@ -378,13 +379,8 @@ button:hover, a:hover {
         border: none;
     }
 
-    .bildekilde-aside {
-        float: right;
-        margin-right: 5vw;
-    }
-
     @media screen and (max-width: 800px){    /*Breaking point*/
-        .spa-fremtiden-aside h2, .spa-fremtiden-aside h5, .spa-fremtiden-aside p {
+        .spa-fremtiden-aside h2, .spa-fremtiden-aside p, .teknologiogdesign {
             padding-right: 4%;
         }
     
@@ -636,7 +632,7 @@ button:hover, a:hover {
         font-size: 1.5vw;
     }
 
-    .spa-fremtiden-aside h5, .spa-fremtiden-aside p {
+    .spa-fremtiden-aside p, .teknologiogdesign {
         font-size: 1vw;
     }
 
