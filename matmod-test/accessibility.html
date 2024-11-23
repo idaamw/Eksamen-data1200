@@ -29,7 +29,8 @@
 <main>
     
     <h1>Accessibility</h1>
-    <p class="accessibility-ingress">Web-accessibility, eller inkluderende webdesign, handler om å utvikle teknologi som kan tas i bruk av så mange mennesker som mulig, uavhengig av deres bakgrunn eller funksjonsevne. </p>
+    <p class="accessibility-ingress">Web-accessibility, eller inkluderende webdesign, handler om å utvikle et brukergrensesnitt som fungerer for så mange mennesker som mulig, uavhengig av deres bakgrunn eller funksjonsevne. 
+        For å oppnå dette for vår nettside har vi særlig fokusert på fargekontraster, semantisk strukturering, responsivt design og alternative tekster/ARIA. Her kan du lese mer om våre vurderinger med tanke på inkluderende design.</p>
 
     <article class="accessibility_main">
         <h2>Generelt</h2>
@@ -39,7 +40,7 @@
         <h2>Semantisk strukturering</h2>
         <p>Riktig bruk av semantiske elementer legger til rette for en bedre opplevelse ved bruk av skjermlesere og annen assisterende teknologi. Vi har etter beste evne 
             strukturert nettsiden med elementer som &#60;header&#62;, &#60;main&#62; og &#60;footer&#62 for å bidra med forståelse av layout, og tags som &#60;nav&#62, &#60;section&#62 og &#60;aside&#62 
-            med passende headings for enklere navigering. Nærmere beskrivelse av hva de ulike elementene gjør finnes kommentert i koden.</p>
+            med passende headings for enklere navigering. Vi har brukt lister der det er passende, som gir bedre oversikt enn for eksempel bruk av &#60;br&#62;. Nærmere beskrivelse av hva de ulike elementene gjør finnes kommentert i koden.</p>
         
         <h2>Tabellen i "Studiets oppbygging"</h2>
         <p>For å gjøre tabellen mer lettleselig ga vi blå bakgrunnsfarge til annenhver rad. Videre brukte vi &#60;strong&#62 taggen for å gi emnenavnene fet skrift. Dette er positivt for skjermlesere, da de vil lese innholdet med ekstra trykk for å vise at innholdet er særlig betydelig.</p>
@@ -52,7 +53,7 @@
 
         <h2>Responsivt design</h2>
         <p>En viktig del av inkluderende design av nettside er å sørge for at siden er responsiv slik at den kan vises på ulike enheter. Ved bruk av @media har vi lagt til CSS kode 
-            slik at nettsiden tilpasser seg når den når visse skjermbredder. Vi har også prøvd oss fram med både grid og flexbokser, noe som er ypperlig for responsivt design. På hovedsiden 
+            slik at nettsiden tilpasser seg når den når visse skjermbredder. Vi har prøvd oss fram med både grid og flexbokser. På hovedsiden 
             har vi et grid-oppsett som viser én boks i bredden på små skjermer, to på mellomstore skjermer som laptop, og tre på ekstra store skjermer.</p>
         <p>Vi har også sjekket nettsiden i Chrome, Edge, og Firefox for å forsikre oss om at den fungerer på tvers av nettlesere.</p>
         
@@ -61,14 +62,9 @@
         <p>Vi brukte Firefox sitt innebydge Inspect-verktøy for å sjekke accessibility.</p>
         <figure class="automatisert_test_bilde">
             <img src="bilder/accessibility/automatisert_test.webp" alt="Firefox gjør automatisert test på siden Activity">
-            <figcaption>Test utført på siden Activity</figcaption>
         </figure>
-        <p>Testen ga utslag om manglende kontrast på noen av tekstboksene på hovedsiden. Også teksten i boksene på Activity-siden ga utslag. Vi justerte fargene, og ga svart bakgrunn til tekstene i Activity-boksene.</p>
+        <p>Testen ga utslag om manglende kontrast på noen av tekstboksene på hovedsiden og activity-siden. Vi justerte fargene, og ga svart bakgrunn til tekstene i Activity-boksene.</p>
         
-   
-        <h2>Oppsummering</h2>
-        <p>For å oppsummere er inkluderende design viktig for at så mange som mulig skal kunne bruke nettsiden på en tilfredsstillende måte. For å oppnå dette har vi særlig 
-            fokusert på semantisk strukturering, responsivt design, fargekontraster og alternative tekster/ARIA.</p>
     </article>
 
 </main>
