@@ -926,6 +926,7 @@ men rekkefølgen på boksene må endres da de vil vises i 1 kolonne, som på mob
     .github-bilder picture img {
         width: 100%;
         display: block;
+        height: 100%;
     }
 
     .githubside .storbyuniversitetet-bilde {
