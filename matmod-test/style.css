@@ -1,30 +1,30 @@
 /* Innhold:
 
-    Hovedside
-        Header
-        Innledning (mellom header og hoved-grid)
-        Details
-        Main-grid og second-grid
-        Bilder i hoved-grid
-        Studiets oppbygging-tabell
-        Studiets oppbygging-tabell @media (max-width: 800px)
-        Andre fag og studenthistorier
-        Aside: spå fremtiden
-        Footer
+    33 Hovedside
+        72 Header
+        99 Innledning (mellom header og hoved-grid)
+        140 Details
+        150 Main-grid og second-grid
+        237 Bilder i hoved-grid
+        246 Studiets oppbygging-tabell
+        285 Studiets oppbygging-tabell @media (max-width: 800px)
+        325 Andre fag og studenthistorier
+        353 Aside: spå fremtiden
+        419 Footer
 
-        Hovedside for mobiltelefon
-        Hovedside for ultra-wide skjerm
-        Hovedside for nettbrett
+        474 Hovedside for mobiltelefon
+        570 Hovedside for ultra-wide skjerm
+        683 Hovedside for nettbrett
 
-    Activityside 
-        Aktivitetsbokser
-        Informasjon under aktivitetsbokser  
-        Footer
-        Activity for mobil
-        Activity for ultra-wide skjerm 
+    707 Activityside 
+        742 Aktivitetsbokser
+        815 Informasjon under aktivitetsbokser  
+        849 Footer
+        892 Activity for mobil
+        910 Activity for ultra-wide skjerm 
 
-    Github
-    Accessibility
+    933 Github
+    984 Accessibility
     */
 
 
@@ -35,7 +35,7 @@
 body {
     overflow-x: hidden;
     margin: 0;
-    font-family: Montserrat, Helvetica, Arial; /* må endres */ 
+    font-family: Montserrat, Helvetica, Arial; 
 }
 
 h1{
@@ -116,21 +116,19 @@ button:hover, a:hover {
         font-size: large;
     }
 
+    td {
+        vertical-align: top;
+    }
+
     .oversikt-tabell{
         margin-left: auto;
         margin-right: auto; /* Plasserer tabellen midt på siden (horisontalt)*/
-        overflow-x: auto; /* Enable horizontal scrolling */ 
-        -webkit-overflow-scrolling: touch; /* For smooth scrolling on mobile */ 
     }
 
-    .oversikt-tabell, .oversikt-tabell th, .oversikt-tabell td { /*MÅ FIKSES MTP PÅ SKALERING*/
+    .oversikt-tabell, .oversikt-tabell th, .oversikt-tabell td { 
         border-spacing: 20px;
         color: black;
         text-align: left;
-    }
-
-    td {
-        vertical-align: top;
     }
 
     .bachelorprogram {
@@ -238,22 +236,15 @@ button:hover, a:hover {
 
 /* BILDER I HOVED-GRID */
 
-    .lilla-student-bilde>img, .robot-bilde>img, .gruppearbeid-bilde>img, .undervisning-bilde>img, .digital-bilde>img  {
-        object-fit: cover; /* cover sørger for at containeren alltid fylles opp av bildet */
-        max-width: 100%; 
-        
-        height: 100%; 
-    } 
-
     .main-grid picture>img {
-    object-fit: cover; /* cover sørger for at containeren alltid fylles opp av bildet */
-    max-width: 100%; 
+    object-fit: cover; /* cover sørger for at containeren alltid fylles opp av bildet */ 
     width: 100%;
     height: 100%;
     }
 
 
 /* STUDIETS OPPBYGGING TABELL */
+
     .studiets-oppbygging {
         background-color: rgb(218, 228, 236);
         margin: 2%;
@@ -360,6 +351,7 @@ button:hover, a:hover {
 
 
 /*ASIDE: SPÅ FREMTIDEN*/
+
     .spa-fremtiden-aside{
         margin-left: 5%;
         margin-right: 5%;
@@ -425,6 +417,7 @@ button:hover, a:hover {
 
 
 /* FOOTER */
+
     footer {
         background-color: rgb(157, 141, 214);
         margin-top: 5%;
@@ -477,7 +470,9 @@ button:hover, a:hover {
     }
 
 
+
 /* HOVEDSIDE FOR MOBILTELEFON */
+
 @media screen and (max-width: 600px) { 
 
     header {
@@ -512,7 +507,7 @@ button:hover, a:hover {
     .oversikt-tabell {
         border-spacing: 5px;
         font-size: 2.8vw;   
-    } 
+    }  
 
     .ingress {
         font-size: 3.5vw;
@@ -570,7 +565,8 @@ button:hover, a:hover {
 }
 
 
-/* ULTRA WIDE 21:9 SKJERM*/
+/* HOVEDSIDE FOR ULTRA WIDE 21:9 SKJERM*/
+
 @media screen and (min-width: 1800px) { /*1800 er min-width for tre kolonner i griden*/
     header {
         height: 125px;
@@ -685,6 +681,7 @@ button:hover, a:hover {
 
 
 /*FOR NETTBRETT */
+
 @media screen and (max-width: 1200px) { 
     .lilla-student-bilde {order: 0;}
     .hva-kan-du-jobbe-som {order: 1;}
@@ -701,8 +698,6 @@ button:hover, a:hover {
 }
 /*for nettbrett fungerer siden i utgangspunktet greit uten tilpasninger, 
 men rekkefølgen på boksene må endres da de vil vises i 1 kolonne, som på mobiltelefon. */
-
-
 
 
 
@@ -763,18 +758,19 @@ men rekkefølgen på boksene må endres da de vil vises i 1 kolonne, som på mob
         border-radius: 8px;
         overflow: hidden;
         box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
-        flex: 0 0 calc(50% - 30px); /* Denne linjen fant vi på stack overflow. Gjør at boksene tar opp 50% av bredden minus litt plass til margin */
+        flex: 0 0 calc(50% - 30px); /* Gjør at boksene tar opp 50% av bredden minus litt plass til margin, kilde: https://developer.mozilla.org/en-US/docs/Web/CSS/flex ,
+        kilde calc: https://developer.mozilla.org/en-US/docs/Web/CSS/calc */
         margin: 10px;
     }
 
     .aktivitet-tekst {
-        background-color: rgba(0, 0, 0, 0.5);
+        background-color: rgba(0, 0, 0, 0.7);
         border-radius: 10px;
     } /*Bakgrunnsfarge på tekst i aktivitetsbokser for accessibility*/
     
     /* oppsett for innholdet på aktivitetene*/
     .aktivitetsside .aktivitetsoppsett {
-        background: rgba(0, 0, 0, 0.7);
+        background: rgba(0, 0, 0, 0.3);
         padding: 20px;
         width: 100%;
         height: 100%;
@@ -892,6 +888,7 @@ men rekkefølgen på boksene må endres da de vil vises i 1 kolonne, som på mob
 
 
 /* ACTIVITY FOR MOBILSKJERM */
+
       @media screen and (max-width: 600px) { 
         .aktivitetsside .innledning p{
             margin-left: 2vw;
@@ -911,6 +908,7 @@ men rekkefølgen på boksene må endres da de vil vises i 1 kolonne, som på mob
 
 
 /* ACTIVITY FOR ULTRA WIDE SKJERM*/
+
     @media screen and (min-width: 1800px) { 
         .aktivitetsside p, .aktivitetsside .innledning p, .aktivitetsside .main-grid p, 
         .aktivitetsside .main-grid a, .aktivitetsside .turutstyr li, .aktivitetsside .sikkerhetstips li, .aktivitetsside .turruter li {
