@@ -85,8 +85,8 @@ button:hover, a:hover {
         margin-top: 2vw;
     }
 
-    header a {
-        padding-right: 15vw; 
+    header nav>a {
+        margin-right: 15vw; 
     } 
 
     .oslomet-logo {
@@ -485,8 +485,8 @@ button:hover, a:hover {
         margin-top: 0px;
     }
 
-    header a {
-        padding-right: 10px;
+    header nav>a {
+        margin-right: 10px;
     }  
 
     .oslomet-logo {
